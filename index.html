@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZA</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="navigation-list">
+            <li class="navigation-item">
+                <a class="navigation-item_active" href="#Meat_pizza">Meat pizza</a>
+            </li>
+            <li class="navigation-item">
+                <a class="nav_link" href="#Seafood_pizza">Seafood pizza</a>
+            </li>
+            <li class="navigation-item">
+                <a class="nav_link" href="#Vegetarian_pizza">Vegetarian pizza</a>
+            </li>
+            <li class="navigation-item">
+                <a class="nav_link" href="#Sweet_pizza">Sweet pizza</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <article class="main-board">
+            <img class="main-board_img" src="img/meat.png" alt="Meat Pizza Logo" width="150" height="150">
+            <p class="main-board_info">
+                Traditional pizza varieties always contain meat products. For a milder taste, use chicken meat, for
+                piquancy - spicy sausage, most often salami or pepperoni. Other commonly used ingredients are ham,
+                bacon, and boiled meat. The “home-style” meat filling can consist of minced meat, boiled sausage or
+                sausages.
+            </p>
+        </article>
+
+        <aside class="recipe-board">
+            <header class="recipe-board_header">Recipes board</header>
+            <ul id="recipe-board_list">
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Capriccio">Capriccioza</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Carbonara">Carbonara</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Piccantino">Piccantino</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Crudo">Crudo</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Montanara">Montanara</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Fattoria">Fattoria</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Prosciutto">Prosciutto</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Diavola">Diavola</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Contadina">Contadina</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Padana">Padana</a>
+                </li>
+                <li class="recipe-board_item">
+                    <a class="recipe-board_link" href="#Mimosa">Mimosa</a>
+                </li>
+            </ul>
+            <hr class="recipe-board_line">
+            <p class="recipe-board_add">&#43;&nbsp;Add New Recipe</p>
+        </aside>
+
+        <aside class="ingredient-board">
+            <header class="ingredient-board_header">Ingredients board</header>
+            <button class="ingredient-board_clear" onclick="myFunction()">Clear filters</button>
+
+            <div id="ingredient-board_list">
+                <label class="wrapper">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Tomato sauce</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Mozzarella</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Mushrooms</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Artichokes</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Cooked ham</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Olives</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Heavy cream</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Pecorino Romano</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Scallions</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Eggs</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Black pepper</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Salame piccantino</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Parma ham</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Pepperoni</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Porchetta</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Asparagus</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Zucchini</span>
+                </label>
+                <label class="wrapper">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="label_title">&nbsp;Parmesan</span>
+                </label>
+            </div>
+
+            <hr class="ingredient-board_line">
+            <p class="ingredient-board_add">&#43;&nbsp;Add New Ingredient</p>
+        </aside>
+    </div>
+
+    <script>
+        let recipeList = document.getElementById('recipe-board_list');
+
+        let aTag = document.createElement('a');
+        aTag.style.textDecoration = "none";
+        aTag.classList.add("recipe-board_link");
+        aTag.innerText = "JS generated";
+
+        let liTag = document.createElement('li');
+        liTag.setAttribute("class", "recipe-board_item");
+        liTag.appendChild(aTag);
+        recipeList.appendChild(liTag);
+    </script>
+
+</body>
+
+</html>
