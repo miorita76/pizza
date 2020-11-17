@@ -39,41 +39,64 @@
 
         <aside class="recipe-board">
             <header class="recipe-board_header">Recipes board</header>
-            <ul id="recipe-board_list">
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Capriccio">Capriccioza</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Carbonara">Carbonara</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Piccantino">Piccantino</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Crudo">Crudo</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Montanara">Montanara</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Fattoria">Fattoria</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Prosciutto">Prosciutto</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Diavola">Diavola</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Contadina">Contadina</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Padana">Padana</a>
-                </li>
-                <li class="recipe-board_item">
-                    <a class="recipe-board_link" href="#Mimosa">Mimosa</a>
-                </li>
-            </ul>
+
+            <div id="recipe-board_list">
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Capriccioza</span>
+                </label>
+                <label class="recipe-wrapper recipe-highlight">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Carbonara</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Piccantino</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Crudo</span>
+                </label>
+                <label class="recipe-wrapper recipe-highlight">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Montanara</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Fattoria</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Prosciutto</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Diavola</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Contadina</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Padana</span>
+                </label>
+                <label class="recipe-wrapper">
+                    <input type="radio" name="recipe">
+                    <span class="recipe-checkmark"></span>
+                    <span class="recipe-label_title">&nbsp;Mimosa</span>
+                </label>
+            </div>
             <hr class="recipe-board_line">
             <p class="recipe-board_add">&#43;&nbsp;Add New Recipe</p>
         </aside>
@@ -83,95 +106,95 @@
             <button class="ingredient-board_clear" onclick="myFunction()">Clear filters</button>
 
             <div id="ingredient-board_list">
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Tomato sauce</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Tomato sauce</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Mozzarella</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Mozzarella</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Mushrooms</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Mushrooms</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Artichokes</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Artichokes</span>
                 </label>
-                <label class="wrapper">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Cooked ham</span>
+                <label class="ingredient-wrapper">
+                    <input type="checkbox" checked="checked">
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Cooked ham</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Olives</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Olives</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Heavy cream</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Heavy cream</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Pecorino Romano</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Pecorino Romano</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Scallions</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Scallions</span>
                 </label>
-                <label class="wrapper">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Eggs</span>
+                <label class="ingredient-wrapper">
+                    <input type="checkbox" checked="checked">
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Eggs</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Black pepper</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Black pepper</span>
                 </label>
-                <label class="wrapper">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Salame piccantino</span>
+                <label class="ingredient-wrapper">
+                    <input type="checkbox" checked="checked">
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Salame piccantino</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Parma ham</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Parma ham</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Pepperoni</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Pepperoni</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Porchetta</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Porchetta</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Asparagus</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Asparagus</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Zucchini</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Zucchini</span>
                 </label>
-                <label class="wrapper">
+                <label class="ingredient-wrapper">
                     <input type="checkbox">
-                    <span class="checkmark"></span>
-                    <span class="label_title">&nbsp;Parmesan</span>
+                    <span class="ingredient-checkmark"></span>
+                    <span class="ingredient-label_title">&nbsp;Parmesan</span>
                 </label>
             </div>
 
@@ -181,17 +204,32 @@
     </div>
 
     <script>
+        let recipe = new Array("JS generate the array of the Meat Recipe nr.1", " JS generate the array of the Meat Recipe nr.2");
+
         let recipeList = document.getElementById('recipe-board_list');
 
-        let aTag = document.createElement('a');
-        aTag.style.textDecoration = "none";
-        aTag.classList.add("recipe-board_link");
-        aTag.innerText = "JS generated";
+        for (let i in recipe) {
+            let recipeLabel = document.createElement("LABEL");
+            recipeLabel.setAttribute("class", "recipe-wrapper");
 
-        let liTag = document.createElement('li');
-        liTag.setAttribute("class", "recipe-board_item");
-        liTag.appendChild(aTag);
-        recipeList.appendChild(liTag);
+            let radioInput = document.createElement("INPUT");
+            radioInput.setAttribute("type", "radio");
+            radioInput.setAttribute("name", "recipe");
+            recipeLabel.appendChild(radioInput);
+
+            let recipeCheckmark = document.createElement("SPAN");
+            recipeCheckmark.setAttribute("class", "recipe-checkmark");
+            recipeLabel.appendChild(recipeCheckmark);
+
+            let recipeTitle = document.createElement("SPAN");
+            recipeTitle.setAttribute("class", "recipe-label_title");
+            let titleText = document.createTextNode(recipe[i]);
+            recipeTitle.appendChild(titleText);
+            recipeLabel.appendChild(recipeTitle);
+
+            recipeList.appendChild(recipeLabel);
+        }
+
     </script>
 
 </body>
