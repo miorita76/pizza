@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <div class="container">
-        <article class="main-board">
+        <article id="main-board">
             <img class="main-board_img" src="img/meat.png" alt="Meat Pizza Logo" width="150" height="150">
             <p class="main-board_info">
                 Traditional pizza varieties always contain meat products. For a milder taste, use chicken meat, for
@@ -42,59 +42,14 @@
 
             <div id="recipe-board_list">
                 <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
+                    <input type="radio" name="recipe_item" value="Recipe unmarked">
                     <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Capriccioza</span>
+                    <span class="recipe-label_title">Recipe unmarked</span>
                 </label>
                 <label class="recipe-wrapper recipe-highlight">
-                    <input type="radio" name="recipe">
+                    <input type="radio" name="recipe_item" value="Recipe marked">
                     <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Carbonara</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Piccantino</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Crudo</span>
-                </label>
-                <label class="recipe-wrapper recipe-highlight">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Montanara</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Fattoria</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Prosciutto</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Diavola</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Contadina</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Padana</span>
-                </label>
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">&nbsp;Mimosa</span>
+                    <span class="recipe-label_title">Recipe marked</span>
                 </label>
             </div>
             <hr class="recipe-board_line">
@@ -103,100 +58,18 @@
 
         <aside class="ingredient-board">
             <header class="ingredient-board_header">Ingredients board</header>
-            <button class="ingredient-board_clear" onclick="myFunction()">Clear filters</button>
+            <!--<button class="ingredient-board_clear" onclick="myFunction()">Clear filters</button>-->
+            <form>
+                <div>
+                    <label class="ingredient-board_clear">
+                        <input type="reset">
+                        <span>Clear filters</span>
+                    </label>
+                </div>
+                <div id="ingredient-board_list">
 
-            <div id="ingredient-board_list">
-                <label class="ingredient-wrapper">
-                    <input type="checkbox" checked="checked">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Tomato sauce</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Mozzarella</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Mushrooms</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Artichokes</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox" checked="checked">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Cooked ham</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Olives</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Heavy cream</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Pecorino Romano</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Scallions</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox" checked="checked">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Eggs</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Black pepper</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox" checked="checked">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Salame piccantino</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Parma ham</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Pepperoni</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Porchetta</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Asparagus</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Zucchini</span>
-                </label>
-                <label class="ingredient-wrapper">
-                    <input type="checkbox">
-                    <span class="ingredient-checkmark"></span>
-                    <span class="ingredient-label_title">&nbsp;Parmesan</span>
-                </label>
-            </div>
+                </div>
+            </form>
 
             <hr class="ingredient-board_line">
             <p class="ingredient-board_add">&#43;&nbsp;Add New Ingredient</p>
@@ -204,17 +77,107 @@
     </div>
 
     <script>
-        let recipe = new Array("JS generate the array of the Meat Recipe nr.1", " JS generate the array of the Meat Recipe nr.2");
+        // generate Recipe list
+        let recipeList = [
+            {
+                "name": "Quattro Stagioni",
+                "ingredients": ["tomato sauce", "mozzarella", "mushrooms", "ham", "artichokes", "olives", "oregano"]
+            },
+            {
+                "name": "Carbonara",
+                "ingredients": ["tomato sauce", "mozzarella", "parmesan", "eggs", "bacon"]
+            },
+            {
+                "name": "Crudo",
+                "ingredients": ["tomato sauce", "mozzarella", "parma ham"]
+            },
+            {
+                "name": "Montanara",
+                "ingredients": ["tomato sauce", "mozzarella", "mushrooms", "pepperoni", "Stracchino (soft cheese)"]
+            },
+            {
+                "name": "Emiliana",
+                "ingredients": ["tomato sauce", "mozzarella", "eggplant", "boiled potatoes", "sausage"]
+            },
+            {
+                "name": "Fattoria",
+                "ingredients": ["tomato sauce", "mozzarella", "peppers", "peas", "porchetta (Italian spit-roasted pork)"]
+            },
+            {
+                "name": "Prosciutto or Cardinale",
+                "ingredients": ["tomato sauce", "mozzarella", "ham", "oregano"]
+            },
+            {
+                "name": "Prosciutto e Funghi",
+                "ingredients": ["tomato sauce", "mozzarella", "ham", "mushrooms"]
+            },
+            {
+                "name": "Sarda",
+                "ingredients": ["tomato sauce", "mozzarella", "pecorino cheese", "spicy salami"]
+            },
+            {
+                "name": "Diavola",
+                "ingredients": ["tomato sauce", "mozzarella", "spicy salami", "chilli pepper"]
+            },
+            {
+                "name": "Contadina",
+                "ingredients": ["tomato sauce", "mozzarella", "asparagus", "mushrooms", "bacon", "parmesan"]
+            },
+            {
+                "name": "Capricciosa",
+                "ingredients": ["tomato sauce", "mozzarella", "ham", "artichokes", "mushrooms", "olives"]
+            },
+            {
+                "name": "Padana",
+                "ingredients": ["tomato sauce", "parmesan cheese", "salami", "zucchini", "polenta (boiled cornmeal)"]
+            },
+            {
+                "name": "Tedesca",
+                "ingredients": ["tomato sauce", "mozzarella", "vienna sausage"]
+            },
+            {
+                "name": "Tirolese",
+                "ingredients": ["tomato sauce", "mozzarella", "gorgonzola cheese", "speck"]
+            },
+            {
+                "name": "Boscaiola",
+                "ingredients": ["tomato sauce", "mozzarella", "porcino mushrooms", "bacon"]
+            },
+            {
+                "name": "Francescana",
+                "ingredients": ["tomato sauce", "mozzarella", "porcino mushrooms", "ham", "parmesan"]
+            },
+            {
+                "name": "Valdostana",
+                "ingredients": ["tomato sauce", "mozzarella", "fontina cheese", "bacon"]
+            },
+            {
+                "name": "Bismarck",
+                "ingredients": ["tomato sauce", "mozzarella", "ham", "fried egg"]
+            }
+        ];
 
-        let recipeList = document.getElementById('recipe-board_list');
+        recipeList.sort(function (a, b) {
+            if (a.name > b.name) {
+                return 1;
+            }
+            if (a.name < b.name) {
+                return -1;
+            }
+            return 0;
+        });
 
-        for (let i in recipe) {
+        let recipeItem = document.getElementById('recipe-board_list');
+
+        for (let i in recipeList) {
             let recipeLabel = document.createElement("LABEL");
             recipeLabel.setAttribute("class", "recipe-wrapper");
 
             let radioInput = document.createElement("INPUT");
             radioInput.setAttribute("type", "radio");
-            radioInput.setAttribute("name", "recipe");
+            radioInput.setAttribute("name", "recipe_item");
+            radioInput.setAttribute("value", recipeList[i].name);
+            radioInput.setAttribute("onclick", "displayRecipeValue()");
             recipeLabel.appendChild(radioInput);
 
             let recipeCheckmark = document.createElement("SPAN");
@@ -223,12 +186,73 @@
 
             let recipeTitle = document.createElement("SPAN");
             recipeTitle.setAttribute("class", "recipe-label_title");
-            let titleText = document.createTextNode(recipe[i]);
+            let titleText = document.createTextNode(recipeList[i].name);
             recipeTitle.appendChild(titleText);
             recipeLabel.appendChild(recipeTitle);
 
-            recipeList.appendChild(recipeLabel);
+            recipeItem.appendChild(recipeLabel);
         }
+
+        function displayRecipeValue() {
+            let recipeSelected = document.getElementsByName('recipe_item');
+
+            for (i = 0; i < recipeSelected.length; i++) {
+                if (recipeSelected[i].checked)
+                    console.log(recipeSelected[i].value);
+            }
+        }
+
+
+        // generate Ingredient list
+        let ingredientList = [
+            "tomato sauce", "mozzarella", "mushrooms", "ham", "artichokes", "olives", "oregano", "parmesan", "eggs", "bacon", "parma ham", "pepperoni", "stracchino (soft cheese)", "eggplant", "boiled potatoes", "sausage", "peppers", "peas", "porchetta (Italian spit-roasted pork)", "pecorino cheese", "spicy salami", "chilli pepper", "asparagus", "salami", "zucchini", "polenta (boiled cornmeal)", "vienna sausage", "gorgonzola cheese", "speck", "porcino mushrooms", "fontina cheese", "fried egg"
+        ]
+
+        ingredientList.sort(function (a, b) {
+            if (a > b) {
+                return 1;
+            }
+            if (a < b) {
+                return -1;
+            }
+            return 0;
+        });
+
+        let ingredientItem = document.getElementById("ingredient-board_list");
+
+        for (let i in ingredientList) {
+            let ingredientLabel = document.createElement("LABEL");
+            ingredientLabel.setAttribute("class", "ingredient-wrapper");
+
+            let checkboxInput = document.createElement("INPUT");
+            checkboxInput.setAttribute("type", "checkbox");
+            checkboxInput.setAttribute("name", "ingredient_item");
+            checkboxInput.setAttribute("value", ingredientList[i]);
+            checkboxInput.setAttribute("onclick", "displayIngredientValue()");
+            ingredientLabel.appendChild(checkboxInput);
+
+            let ingredientCheckmark = document.createElement("SPAN");
+            ingredientCheckmark.setAttribute("class", "ingredient-checkmark");
+            ingredientLabel.appendChild(ingredientCheckmark);
+
+            let ingredientTitle = document.createElement("SPAN");
+            ingredientTitle.setAttribute("class", "ingredient-label_title");
+            let titleText = document.createTextNode(ingredientList[i]);
+            ingredientTitle.appendChild(titleText);
+            ingredientLabel.appendChild(ingredientTitle);
+
+            ingredientItem.appendChild(ingredientLabel);
+        }
+
+        function displayIngredientValue() {
+            var ingredientsSelected = document.getElementsByName('ingredient_item');
+
+            for (i = 0; i < ingredientsSelected.length; i++) {
+                if (ingredientsSelected[i].checked)
+                    console.log(ingredientsSelected[i].value);
+            }
+        }
+
 
     </script>
 
