@@ -40,7 +40,7 @@ body {
 }
 
 
-.main-board {
+#main-board {
     width: 49%;
     min-height: 50px;
     margin: 0 0.5% 0 1%;
@@ -98,7 +98,7 @@ body {
 .recipe-wrapper {
     display: block;
     position: relative;
-    padding: 8px 0 8px 28px;
+    padding: 8px 0 8px 35px;
     margin: 0;
     cursor: pointer;
 
@@ -218,21 +218,34 @@ body {
     background-color: #FCDCBA;
 }
 
+
+.ingredient-board_clear input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
 .ingredient-board_clear {
     margin: 0 auto 20px auto;
     padding: 7px 30px;
 
     display: block;
-    font-size: 12px;
+    width: 40%;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
     letter-spacing: 1px;
-    color: white;
+    color: brown;
+    font-weight: 400;
     text-align: center;
     text-decoration: none;
     border-radius: 4px;
     border: none;
-    background-color: brown;
+    background-color: rosybrown;
     box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
-}
+    cursor: pointer;
+  }
 
 .ingredient-board_clear:focus {
     outline: none;
@@ -242,12 +255,13 @@ body {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     color: white;
     background-color: brown;
+    cursor: pointer;
   }
 
 .ingredient-board_clear:active {
     box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
-    background-color: rgb(98, 99, 96);
-    color: white;
+    background-color: rgb(160, 163, 153);
+    color: black;
   }
 
 
@@ -261,7 +275,7 @@ body {
 .ingredient-wrapper {
     display: block;
     position: relative;
-    padding: 8px 0 8px 28px;
+    padding: 8px 0 8px 35px;
     margin: 0;
     cursor: pointer;
 
