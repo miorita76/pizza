@@ -1,268 +1,400 @@
 body {
-    background-color: #F0EBDA;
+  background-color: #F0EBDA;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-    width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;    
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;    
 }
 
 #navigation-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .navigation-item {
-    margin: 20px 50px;
-    font-family: Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  margin: 20px 50px;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .navigation-item_active {
-    color: brown;
-    text-decoration: underline;
+  color: brown;
+  text-decoration: underline;
 }
 
 .nav_link {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .nav_link:hover {
-    color: brown;
+  color: brown;
 }
 
 
 #main-board {
-    width: 49%;
-    min-height: 50px;
-    margin: 0 0.5% 0 1%;
-    background-color: #FCDCBA;
+  width: 49%;
+  min-height: 50px;
+  margin: 0 0.5% 0 1%;
+  background-color: #FCDCBA;
 }
 
 .main-board_img {
-    display: block;
-    margin: 40px auto 20px auto;
+  display: block;
+  margin: 40px auto 20px auto;
 }
 
 .main-board_info {
-    width: 90%;
-    margin: 0 auto 40px auto;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: brown;
-    text-align: justify;
-    line-height: 1.5;
-    letter-spacing: 1px;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: brown;
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
+/* --------------- recipe-scaffolding START --------------- */
+
+#recipe-scaffolding {
+  width: 49%;
+  min-height: 50px;
+  margin: 0 0.5% 0 1%;
+  background-color: #f8f6f4f3;
+  position: relative;
+}
+
+#recipe-add {
+  margin: 0 auto;
+  padding: 0;
+  width: 95%;
+  border: 1px solif red
+}
+
+.recipe-add_title {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: brown;
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.recipe-add_heading {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: brown;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.recipe-add_input {
+  width: 98%;
+  margin: 10px 0 0 0;
+  border: 1px solid transparent; 
+}
+
+.recipe-add_input:hover {
+  width: 98%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #cccccc;
+}
+
+.recipe-add_input:focus,
+.recipe-add_input:active {
+  width: 98%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid brown;
+  outline-width: 0; /* !!! */
+}
+
+.recipe-add_input::-webkit-input-placeholder {
+  color:#cccccc;
+  border: none;
+  border-radius: 4px;
+}
+
+.recipe-add_input:focus::-webkit-input-placeholder { 
+  margin: 0;
+  padding: 0;
+
+  font-family: Tahoma, sans-serif;
+  font-size: 17px;
+  
+  font-weight: 400;
+  color:black;
+  text-overflow: ellipsis;
+}
+
+.recipe-add_input input[type=text] {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- recipe-scaffolding END --------------- */
+
 .recipe-board {
-    width: 24%;
-    min-height: 50px;
-    margin: 0 0.5%;
-    background-color: #FCDCBA;
+  width: 24%;
+  min-height: 50px;
+  margin: 0 0.5%;
+  background-color: #FCDCBA;
 }
 
 .recipe-board_header,
 .ingredient-board_header {
-    margin: 10px 0 10px 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    font-style: italic;
-    color: brown;
-    text-align: center;
-    text-decoration: underline;
-    line-height: 1.5;
-    letter-spacing: 1px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  color: brown;
+  text-align: center;
+  text-decoration: underline;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 #recipe-board_list,
 #ingredient-board_list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Recipe block Item customization STRAT */
 /* Customize the label (wrapper) */
 .recipe-wrapper {
-    display: block;
-    position: relative;
-    padding: 8px 0 8px 35px;
-    margin: 0;
-    cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 8px 0 8px 35px;
+  margin: 0;
+  cursor: pointer;
 
-    font-family: Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: brown;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: brown;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .recipe-wrapper:hover {
-    color: black;
-    background-color: pink;
+  color: black;
+  background-color: pink;
 }
 
 /* Recipe highlighted */
 .recipe-wrapper + .recipe-highlight {
-    background-color: rosybrown;
-  }
-
-
-  /* Hide the browser's default checkbox */
-.recipe-wrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  background-color: rosybrown;
 }
-  
+
+
+/* Hide the browser's default checkbox */
+.recipe-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
 /* Create a custom radio button */
 .recipe-checkmark {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 14px;
-    width: 14px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid brown;
-  }
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 14px;
+  width: 14px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid brown;
+}
 
 /* On mouse-over, add body-color */
 .recipe-wrapper:hover input ~ .recipe-checkmark {
-    background-color: #F0EBDA;
-    border: 1px solid black;
-  }
-  
-  /* When the radio button is checked, add a body-color */
+  background-color: #F0EBDA;
+  border: 1px solid black;
+}
+
+/* When the radio button is checked, add a body-color */
 .recipe-wrapper input:checked ~ .recipe-checkmark {
-    background-color: #F0EBDA;
-    border: 1px solid black;
-  }
-  
-  /* When the radio button is checked, Label highlighted */
+  background-color: #F0EBDA;
+  border: 1px solid black;
+}
+
+/* When the radio button is checked, Label highlighted */
 .recipe-wrapper input:checked ~ .recipe-checkmark + .recipe-label_title {
-    color: black;
+  color: black;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .recipe-checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
 .recipe-wrapper input:checked ~ .recipe-checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
 .recipe-wrapper .recipe-checkmark:after {
-      top: 3px;
-      left: 3px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: black;
-  }
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: black;
+}
 /* Recipe block Item customization END */
 
 
 
 .recipe-board_line,
 .ingredient-board_line {
-    height: 1px;
-    width: 90%;
-    background-color: brown;
-    border: none;
+  height: 1px;
+  width: 90%;
+  background-color: brown;
+  border: none;
 }
 
 .recipe-board_add,
-.ingredient-board_add {
-    margin: 0;
-    padding: 0 0 20px 13px;
+.ingredient-board_add,
+.ingredient-board_modify,
+.ingredient-board_erase {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 13px;
     font-family: Tahoma, sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: brown;
     text-decoration: none;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    letter-spacing: 1px;
 }
 
 .recipe-board_add:hover,
-.ingredient-board_add:hover {
+.ingredient-board_add:hover,
+.ingredient-board_modify:hover,
+.ingredient-board_erase:hover {
     color: black;
 }
 
+.ingredient-board_add:focus,
+.ingredient-board_modify:focus,
+.ingredient-board_erase:focus {
+  outline: none;
+}
+
 .ingredient-board {
-    width: 23%;
-    min-height: 50px;
-    margin: 0 1% 0 0.5%;
-    background-color: #FCDCBA;
+  width: 23%;
+  min-height: 50px;
+  margin: 0 1% 0 0.5%;
+  background-color: #FCDCBA;
 }
 
 
 .ingredient-board_clear input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
 }
 
 .ingredient-board_clear {
-    margin: 0 auto 20px auto;
-    padding: 7px 30px;
+  margin: 0 auto 20px auto;
+  padding: 7px 30px;
 
-    display: block;
-    width: 40%;
-    font-family: Tahoma, sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: brown;
-    font-weight: 400;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 4px;
-    border: none;
-    background-color: rosybrown;
-    box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
-    cursor: pointer;
-  }
+  display: block;
+  width: 40%;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: brown;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  background-color: rosybrown;
+  box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
+  cursor: pointer;
+}
 
 .ingredient-board_clear:focus {
-    outline: none;
-  }
+  outline: none;
+}
 
 .ingredient-board_clear:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    color: white;
-    background-color: brown;
-    cursor: pointer;
-  }
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+  background-color: brown;
+  cursor: pointer;
+}
 
 .ingredient-board_clear:active {
-    box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
-    background-color: rgb(160, 163, 153);
-    color: black;
-  }
+  box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
+  background-color: rgb(160, 163, 153);
+  color: black;
+}
 
 
 
@@ -273,85 +405,320 @@ body {
 /* Ingredient block customization */
 /* Customize the label (wrapper) */
 .ingredient-wrapper {
-    display: block;
-    position: relative;
-    padding: 8px 0 8px 35px;
-    margin: 0;
-    cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 8px 0 8px 35px;
+  margin: 0;
+  cursor: pointer;
 
-    font-family: Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: brown;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: brown;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .ingredient-wrapper:hover {
-    color: black;
-    background-color: pink;
+  color: black;
+  background-color: pink;
 }
 
-  /* Hide the browser's default checkbox */
+/* Hide the browser's default checkbox */
 .ingredient-wrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
-  
-  /* Create a custom checkbox */
+
+/* Create a custom checkbox */
 .ingredient-checkmark {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 15px;
-    width: 15px;
-    background-color: transparent;
-    border: 1px solid brown;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid brown;
 }
 
-  /* On mouse-over, add body-color */
+/* On mouse-over, add body-color */
 .ingredient-wrapper:hover input ~ .ingredient-checkmark {
-    background-color: #F0EBDA;
-    border: 1px solid black;
+  background-color: #F0EBDA;
+  border: 1px solid black;
 }
-  
-  /* When the checkbox is checked, add body-color */
+
+/* When the checkbox is checked, add body-color */
 .ingredient-wrapper input:checked ~ .ingredient-checkmark {
-    background-color: #F0EBDA;
-    border: 1px solid black;
+  background-color: #F0EBDA;
+  border: 1px solid black;
 }
 
-  /* When the checkbox is checked, Label highlighted */
+/* When the checkbox is checked, Label highlighted */
 .ingredient-wrapper input:checked ~ .ingredient-checkmark + .ingredient-label_title {
-    color: black;
+  color: black;
 }
 
-  /* Create the checkmark/indicator (hidden when not checked) */
+/* Create the checkmark/indicator (hidden when not checked) */
 .ingredient-checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
-  
-  /* Show the checkmark when checked */
+
+/* Show the checkmark when checked */
 .ingredient-wrapper input:checked ~ .ingredient-checkmark:after {
-    display: block;
+  display: block;
 }
-  
-  /* Style the checkmark/indicator */
+
+/* Style the checkmark/indicator */
 .ingredient-wrapper .ingredient-checkmark:after {
-    left: 5px;
-    top: -6px;
-    width: 7px;
-    height: 15px;
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(35deg);
-    -ms-transform: rotate(35deg);
-    transform: rotate(35deg);
+  left: 5px;
+  top: -6px;
+  width: 7px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
 }
+
+
+/* Modal Window customization START*/
+.modal-window {
+  display: none;   /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-window_content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-window_body {
+  margin: 10px 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.modal-window_body-select {
+  display: block;
+  font-size: 16px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  color: brown;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 90%;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}
+
+.modal-window_body-select:hover {
+  border-color: #888;
+}
+
+.modal-window_body-select:focus {
+  border-color: #aaa;
+  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222; 
+  outline: none;
+}
+
+
+.modal-window_body-input {
+  width: 90%;
+  border: 1px solid transparent;
+}
+#modal-body_input {
+  margin: 20px 0 10px 0;
+}
+
+.modal-window_body-input:hover {
+  width: 90%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #cccccc;
+}
+
+.modal-window_body-input:focus,
+.modal-window_body-input:active {
+  width: 90%;
+  border: 1px solid transparent;
+  border-bottom: 1px solid brown;
+  outline-width: 0; /* !!! */
+}
+
+.modal-window_body-input::-webkit-input-placeholder {
+  color:#cccccc;
+  border: none;
+  border-radius: 4px;
+}
+
+.modal-window_body-input:focus::-webkit-input-placeholder { 
+  margin: 0;
+  padding: 0;
+
+  font-family: Tahoma, sans-serif;
+  font-size: 17px;
+  
+  font-weight: 400;
+  color:black;
+  text-overflow: ellipsis;
+}
+
+.modal-window_body-input input[type=text] {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ingredientErrorAdd,
+.ingredientErrorModify {
+  margin: 0;
+  padding: 5px 0;
+  color: brown;
+}
+
+
+
+.modal-window_header,
+.modal-window_footer {
+  height: 40px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FCDCBA;
+}
+.modal-window_footer {
+  justify-content: center;
+}
+
+.modal-window_header-title {
+  margin: 0;
+  padding: 3px 0;
+  width: 95%;
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: brown;
+  text-align: center;
+}
+
+/* The Close Button */
+.modal-window_header-close {
+  margin: 0;
+  padding: 3px 8px 0 0;
+  font-family: Tahoma, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal-window_header-close:hover,
+.modal-window_header-close:focus {
+  color: red;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.btn-add,
+.btn-modify,
+.btn-erase,
+.btn-cancel {
+  height: 30px;
+  width: 20%;
+  margin: 5px;
+
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: brown;
+  font-weight: 500;
+  text-align: center;
+
+  border-radius: 4px;
+  border: none;
+  background-color: rosybrown;
+  box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
+  cursor: pointer;
+}
+
+.btn-add:hover,
+.btn-modify:hover,
+.btn-erase:hover,
+.btn-cancel:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+  background-color: brown;
+  cursor: pointer;
+}
+
+.btn-add:active,
+.btn-modify:active,
+.btn-erase:active,
+.btn-cancel:active {
+  box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
+  background-color: rgb(160, 163, 153);
+  color: black;
+}
+/* Modal Window customization END
