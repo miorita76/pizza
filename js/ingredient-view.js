@@ -8,15 +8,17 @@ ingredientsDefault.sort();
 let ingredientsClient = [];
 
 let client_ingredients = localStorage.getItem('ingredients');
-if (client_ingredients) {
+if (typeof client_ingredients != "undefined" && client_ingredients != null && client_ingredients.length != null && client_ingredients.length > 0) {
     ingredientsClient = JSON.parse(client_ingredients);
     ingredientsClient.sort();
 };
 
-let ingredientsList = ingredientsDefault.concat(ingredientsClient);
+let ingredientsList = ingredientsDefault;
+if (typeof ingredientsClient != "undefined" && ingredientsClient != null && ingredientsClient.length != null && ingredientsClient.length > 0) {
+    ingredientsList = ingredientsDefault.concat(ingredientsClient);
+}
 
-
-class IngredientsDefault {
+class IngredientsBoard {
     constructor(ingredientsArr, defaultArrLength) {
         this.ingredientsArr = ingredientsArr;
         this.defaultArrLength = defaultArrLength;
@@ -72,7 +74,49 @@ class IngredientsDefault {
             document.getElementById("btn-ingredientsErase").classList.remove("visually-hidden");
         };
     }
+    ingredientsScaffolding() {
+        let parent = document.querySelector("#recipe-add_ingredients-draw");
+
+        let left = document.getElementById("recipe-scaffolding_left");
+        let right = document.getElementById("recipe-scaffolding_right");
+
+        for (let key in this.ingredientsArr) {
+            if (key < this.ingredientsArr.length / 2 + 1)
+                parent = left
+            else parent = right;
+
+            let ingredientLabel = document.createElement("LABEL");
+            ingredientLabel.setAttribute("class", "ingredient-wrapper");
+
+            if (key == this.defaultArrLength) {
+                let headerName = document.createElement("HEADER");
+                headerName.setAttribute("class", "ingredient-board_header");
+                headerName.textContent = "My Ingredients";
+                parent.appendChild(headerName);
+            };
+
+
+            let checkboxInput = document.createElement("INPUT");
+            checkboxInput.setAttribute("type", "checkbox");
+            checkboxInput.setAttribute("name", "ingredient_item");
+            checkboxInput.setAttribute("value", this.ingredientsArr[key]);
+            ingredientLabel.appendChild(checkboxInput);
+
+            let ingredientCheckmark = document.createElement("SPAN");
+            ingredientCheckmark.setAttribute("class", "ingredient-checkmark");
+            ingredientLabel.appendChild(ingredientCheckmark);
+
+            let ingredientTitle = document.createElement("SPAN");
+            ingredientTitle.setAttribute("class", "ingredient-label_title");
+
+            let titleText = document.createTextNode(this.ingredientsArr[key]);
+            ingredientTitle.appendChild(titleText);
+            ingredientLabel.appendChild(ingredientTitle);
+
+            parent.appendChild(ingredientLabel);
+        };
+    }
 };
 
-let ingredients = new IngredientsDefault(ingredientsList, ingredientsDefault.length);
+let ingredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
 ingredients.boardDraw();
