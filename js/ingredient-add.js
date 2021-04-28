@@ -76,10 +76,12 @@ function itemAdd() {
         clearBoard('#ingredient-board_list-default');
 
         // display ingredients list 
-        let ingredients = new IngredientsDefault(ingredientsList, ingredientsDefault.length);
-        ingredients.boardDraw();
+        let fullIngredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
+        fullIngredients.boardDraw();
+
 
         modalWindowAdd.style.display = "none";
+
     }
     else if (newIngredient == '') {
         errMsg.textContent = "no data inserted";
