@@ -1,119 +1,149 @@
-console.log('START  recipe-add.js');
+ingredients.ingredientsScaffolding();
 
-// draw ingredients in recipe Add/Modify/Erase block
-class IngredientsScaffolding {
-    constructor(ingredientsArr, defaultArrLength) {
-        this.ingredientsArr = ingredientsArr;
-        this.defaultArrLength = defaultArrLength;
-    }
-    boardDraw() {
-        let parent = document.querySelector("#recipe-add_ingredients-draw");
-
-        for (let i in this.ingredientsArr) {
-
-            let ingredientLabel = document.createElement("LABEL");
-            ingredientLabel.setAttribute("class", "ingredient-wrapper_scaffolding");
-
-
-            if (i == this.defaultArrLength) {
-                let lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-
-                let headerName = document.createElement("HEADER");
-                headerName.setAttribute("class", "ingredient-board_header-scaffolding");
-                headerName.textContent = "My ingredients board";
-                parent.appendChild(headerName);
-
-                lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-            };
-
-
-            let checkboxInput = document.createElement("INPUT");
-            checkboxInput.setAttribute("type", "checkbox");
-            checkboxInput.setAttribute("name", "ingredient_item-recipe");
-            checkboxInput.setAttribute("value", this.ingredientsArr[i]);
-            //            checkboxInput.setAttribute("onclick", "displayIngredientValue()");
-            ingredientLabel.appendChild(checkboxInput);
-
-            let ingredientCheckmark = document.createElement("SPAN");
-            ingredientCheckmark.setAttribute("class", "ingredient-checkmark_scaffolding");
-            ingredientLabel.appendChild(ingredientCheckmark);
-
-            let ingredientTitle = document.createElement("SPAN");
-            ingredientTitle.setAttribute("class", "ingredient-label_title-scaffolding");
-
-            let titleText = document.createTextNode(this.ingredientsArr[i]);
-            ingredientTitle.appendChild(titleText);
-            ingredientLabel.appendChild(ingredientTitle);
-
-            parent.appendChild(ingredientLabel);
-        };
-
-        if (this.ingredientsArr.length > this.defaultArrLength) {
-            document.getElementById("btn-ingredientsModify").classList.remove("visually-hidden");
-            document.getElementById("btn-ingredientsErase").classList.remove("visually-hidden");
-        };
-    }
-};
-
-let recipeIngredientDraw = new IngredientsScaffolding(ingredientsList, ingredientsDefault.length);
-recipeIngredientDraw.boardDraw();
-
-
-
-function showSelected() {
+function saveScaffoldAdd() {
     let pizza_name = document.getElementById("recipe-add_name").value;
+
     if (!pizza_name) {
-        console.log('no Name inserted !!')
-    };
-
-
-    // identify checked ingredients and form an array
-    let checkboxes = document.getElementsByName('ingredient_item-recipe');
-    let vals = '';
-    for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked) {
-            vals += "," + checkboxes[i].value;
-        }
-    };
-    if (vals) vals = vals.substring(1);
-    let ingredients_selected = vals.split(",");
-
-    // verify if any ingredient selected
-    if (vals == '') {
-        console.log('no Ingredients selected !!');
-    };
-
-    // read Local storage the client recipes
-    let recipesLocal = [];
-    let temp = new Object();
-    recipesLocal = localStorage.getItem('recipes');
-    recipesLocal = JSON.parse(recipesLocal);
-
-    if (recipesLocal) {
-        temp.name = pizza_name;
-        temp.ingredients = ingredients_selected;
-        recipesLocal.push(temp);
+        document.getElementById("recipe-error_nameAdd").classList.remove("visually-hidden");
     }
     else {
-        recipesLocal = [];
-        temp.name = pizza_name;
-        temp.ingredients = ingredients_selected;
-        recipesLocal.push(temp);
-    };
-
-    localStorage.setItem('recipes', JSON.stringify(recipesLocal));
-
-    for (let key in recipesLocal) {
-        recipesDefault.push(recipesLocal[key]);
+        document.getElementById("recipe-error_nameAdd").classList.add("visually-hidden");
+        document.getElementById("recipe-scaffolding").style.display = "block";
     };
 
 
+    let ingredientsSelected = document.getElementsByName('ingredient_item');
+    let elementSelected = [];
+
+    // identify selected Ingredients array
+    for (i = 0; i < ingredientsSelected.length; i++) {
+        if (ingredientsSelected[i].checked) {
+            elementSelected.push(ingredientsSelected[i].value);
+        }
+    }
+    // verification array elementSelected is empty or does not exist
+    // else is selected Ingredients array
+    if (elementSelected.length === 0 || elementSelected === undefined) {
+        document.getElementById("recipe-error_ingredientAdd").classList.remove("visually-hidden");
+        // console.log('No ingerdient elements selected !');
+    }
+    else {
+        document.getElementById("recipe-error_ingredientAdd").classList.add("visually-hidden");
+        document.getElementById("recipe-scaffolding").style.display = "block";
+        // console.log(elementSelected);
+    };
+
+    // verification if ingredient details is empty
+    let ingredients_details = document.getElementById("recipe-add_ingredients-details").value;
+    if (ingredients_details == '') {
+        document.getElementById("recipe-error_detailAdd").classList.remove("visually-hidden");
+        //console.log('No Ingredients Details Inserted !!')
+    }
+    else {
+        document.getElementById("recipe-error_detailAdd").classList.add("visually-hidden");
+        document.getElementById("recipe-scaffolding").style.display = "block";
+    };
+
+    // verification if recipie description is empty
+    let recipe_description = document.getElementById("recipe-add_description").value;
+    if (recipe_description == '') {
+        document.getElementById("recipe-error_descriptionAdd").classList.remove("visually-hidden");
+        //console.log('No Recipe Description Inserted !!')
+    }
+    else {
+        document.getElementById("recipe-error_descriptionAdd").classList.add("visually-hidden");
+        document.getElementById("recipe-scaffolding").style.display = "block";
+    };
+
+
+    if ((pizza_name) && (elementSelected.length !== 0) && (elementSelected !== undefined)) {
+        // create for the first time or insert data in My Recipies List
+        // read Local storage the client recipes
+        let temp = new Object();
+        let recipesLocal = localStorage.getItem('recipes');
+        recipesLocal = JSON.parse(recipesLocal);
+
+        let flag = false;
+        for (let i = 0; i < recipesList.length; i++) {
+            if (pizza_name == recipesList[i].name) {
+                flag = true;
+                // console.log('Recipe Name Exists Already');
+            };
+        };
+
+        if (flag == true) {
+            document.getElementById("recipe-error_nameAdd_exist").classList.remove("visually-hidden");
+        }
+        else {
+            document.getElementById("recipe-error_nameAdd_exist").classList.add("visually-hidden");
+            document.getElementById("recipe-scaffolding").style.display = "block";
+
+            let fullRecipes = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH);
+
+            if (typeof recipesLocal != "undefined" && recipesLocal != null && recipesLocal.length != null && recipesLocal.length > 0) {
+
+                temp.name = pizza_name;
+                temp.image = 'img/personal-meat.png';
+                temp.ingredients = elementSelected;
+                temp.details = ingredients_details;
+                temp.description = recipe_description;
+                recipesLocal.push(temp);
+
+                localStorage.setItem('recipes', JSON.stringify(recipesLocal));
+
+                recipesList.push(temp);
+
+                // Clear recipe board
+                clearBoard('#recipe-board_list');
+                fullRecipes.boardDraw();
+
+                document.getElementById("recipe-scaffolding").style.display = "none";
+                document.getElementById("recipe-add").classList.add("visually-hidden");
+                document.getElementById("main-board").classList.remove("visually-hidden");
+            }
+            else {
+                recipesLocal = [];
+                temp.name = pizza_name;
+                temp.image = 'img/personal-meat.png';
+                temp.ingredients = elementSelected;
+                temp.details = ingredients_details;
+                temp.description = recipe_description;
+                recipesLocal.push(temp);
+
+                localStorage.setItem('recipes', JSON.stringify(recipesLocal));
+
+                recipesList.push(temp);
+
+                // Clear recipe board
+                clearBoard('#recipe-board_list');
+                fullRecipes.boardDraw();
+
+                document.getElementById("recipe-scaffolding").style.display = "none";
+                document.getElementById("recipe-add").classList.add("visually-hidden");
+                document.getElementById("main-board").classList.remove("visually-hidden");
+            };
+        };
+    };
+};
+document.querySelector('#btn-add_recipe').onclick = saveScaffoldAdd;
+
+// Cancel ADD Scaffold board
+function cancelScaffoldAdd() {
+    document.getElementById("recipe-scaffolding").style.display = "none";
+    document.getElementById("recipe-add").classList.add("visually-hidden");
+    document.getElementById("main-board").classList.remove("visually-hidden");
+};
+document.querySelector('#btn-cancel_recipe').onclick = cancelScaffoldAdd;
+
+// Open ADD Scaffold board from recipice board
+function viewScaffoldAdd() {
+    document.getElementById("recipe-display").classList.add("visually-hidden");
+    document.getElementById("recipe-error_nameAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-error_ingredientAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-error_detailAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-scaffolding").style.display = "block";
+    document.getElementById("recipe-add").classList.remove("visually-hidden");
+    document.getElementById("main-board").classList.add("visually-hidden");
 };
 
-
-
-document.querySelector('#btn-add_recipe').onclick = showSelected;
+document.querySelector('#btn-recipesAdd').onclick = viewScaffoldAdd;
