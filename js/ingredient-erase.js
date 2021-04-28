@@ -53,7 +53,7 @@ function eraseElement(chosen) {
         clearBoard('#ingredient-board_list-default');
 
         // display ingredients list 
-        let ingredients = new IngredientsDefault(ingredientsList, ingredientsDefault.length);
+        let ingredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
         ingredients.boardDraw();
 
         modalWindowErase.style.display = "none";
