@@ -27,7 +27,7 @@
         </ul>
     </nav>
     <div class="container">
-        <article id="main-board" class="visually-hidden">
+        <article id="main-board">
             <img class="main-board_img" src="img/meat.png" alt="Meat Pizza Logo" width="150" height="150">
             <p class="main-board_info">
                 Traditional pizza varieties always contain meat products. For a milder taste, use chicken meat, for
@@ -37,30 +37,63 @@
             </p>
         </article>
         <div id="recipe-scaffolding">
-            <div id="recipe-add">
+            <div id="recipe-add" class="visually-hidden">
+
                 <p class="recipe-add_title">ADD New Recipise</p>
                 <p id="recipe-add_title" class="recipe-add_heading">Input Pizza Name:</p>
                 <input type="text" id="recipe-add_name" class="recipe-add_input" placeholder="Input Pizza Name">
+                <p id="recipe-error_nameAdd" class="recipeErrorAdd visually-hidden">No Name Inserted !!</p>
+                <p id="recipe-error_nameAdd_exist" class="recipeErrorAdd visually-hidden">Recipe Name Exists Already !!
+                </p>
+
                 <p class="recipe-add_heading">Select Ingredients:</p>
-                <div id="recipe-add_ingredients-draw" class="recipe-add_ingredients"></div>
+                <div id="recipe-add_ingredients-draw" class="recipe-add_ingredients">
+                    <div id="recipe-scaffolding_left"></div>
+                    <div id="recipe-scaffolding_right"></div>
+                </div>
+                <p id="recipe-error_ingredientAdd" class="recipeErrorAdd visually-hidden">No Ingerdient Elements
+                    Selected !</p>
+
+                <p class="recipe-add_heading">Ingredients Details:</p>
+                <textarea name="ingredients Details" id="recipe-add_ingredients-details" cols="57" rows="10"
+                    placeholder="Insert Ingredients details"></textarea>
+                <p id="recipe-error_detailAdd" class="recipeErrorAdd visually-hidden">No Ingredients Details
+                    Inserted !!</p>
+
                 <p class="recipe-add_heading">Recipe description:</p>
-                <div class="recipe-add_description"></div>
+                <textarea name="recipe description" id="recipe-add_description" cols="57" rows="10"
+                    placeholder="Insert Recipe description"></textarea>
+                <p id="recipe-error_descriptionAdd" class="recipeErrorAdd visually-hidden">No Recipe Description
+                    Inserted !!</p>
+
                 <div class="recipe-buttons">
                     <button id="btn-add_recipe" class="btn-add">ADD</button>
-                    <button class="btn-cancel">Cancel</button>
+                    <button id="btn-cancel_recipe" class="btn-cancel">Cancel</button>
                 </div>
             </div>
-            <div id="recipe-modify">
-
+            <div id="recipe-modify" class="visually-hidden">
+                recipe-modify
             </div>
-            <div id="recipe-erase">
+            <div id="recipe-erase" class="visually-hidden">
+                recipe-erase
+            </div>
+            <div id="recipe-display" class="visually-hidden">
 
+                <p class="recipe-display_title">pizza "Sample"</p>
+                <img class="recipe-display_img" src="img/meat.png" alt="Meat Pizza Logo" width="150" height="150">
+                <p class="recipe-display_details"></p>
+                <p class="recipe-display_description"></p>
+
+                <div id="recipe-buttons_manage" class="recipe-buttons visually-hidden">
+                    <button id="btn-modify_recipe" class="btn-add">Modify</button>
+                    <button id="btn-erase_recipe" class="btn-cancel">Erase</button>
+                </div>
             </div>
         </div>
 
         <aside class="recipe-board">
             <header class="recipe-board_header">Recipes board</header>
-
+            <!--
             <div id="recipe-board_list-example">
                 <label class="recipe-wrapper">
                     <input type="radio" name="recipe_item" value="Recipe unmarked">
@@ -73,6 +106,7 @@
                     <span class="recipe-label_title">Recipe marked</span>
                 </label>
             </div>
+        -->
             <div id="recipe-board_list"></div>
             <hr class="recipe-board_line">
             <button id="btn-recipesAdd" class="recipe-board_add">&#43;&nbsp;Add New Recipe</button>
@@ -90,9 +124,7 @@
                 </div>
 
                 <div id="ingredient-board_list-default"></div>
-
             </form>
-
 
             <hr class="ingredient-board_line">
             <button id="btn-ingredientsAdd" class="ingredient-board_add">&#43;&nbsp;Add New Ingredient</button>
@@ -103,6 +135,24 @@
         </aside>
     </div>
 
+
+    <!-- modal window recipe Delete START -->
+
+    <div id="recipeErase" class="modal-window">
+        <div class="modal-window_content">
+            <div class="modal-window_header">
+                <p class="modal-window_header-title">Erase My Recipe</p>
+                <p id="modal-window_closeErase" class="modal-window_header-close">&#43;</p>
+            </div>
+            <div id="recipeEraseBody" class="modal-window_body">Are You sure to Erase the Recipe ?</div>
+            <div id="recipeEraseFooter" class="modal-window_footer">
+                <button id="btn-erase" class="btn-erase">Erase</button>
+                <button id="btn-cancelErase" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal window recipe Delete END -->
 
     <!-- modal window ingredient Add/Modify/Delete START -->
 
@@ -155,8 +205,10 @@
     <script src="js/ingredient-erase.js"></script>
     <script src="js/ingredient-view.js"></script>
 
-    <script src="js/recipe-add.js"></script>
     <script src="js/recipe-view.js"></script>
+    <script src="js/recipe-add.js"></script>
+    <script src="js/recipe-modify.js"></script>
+    <script src="js/recipe-erase.js"></script>
 
     <script src="js/script.js"></script>
 
