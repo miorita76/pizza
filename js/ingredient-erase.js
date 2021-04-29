@@ -39,6 +39,7 @@ btnErase.addEventListener("click", function () {
 function eraseElement(chosen) {
 
     function itemDeleted() {
+
         ingredientsClient.splice(chosen, 1);
 
         if (ingredientsClient.length == 0) {
@@ -53,12 +54,11 @@ function eraseElement(chosen) {
         clearBoard('#ingredient-board_list-default');
 
         // display ingredients list 
-        let ingredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
+        let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
         ingredients.boardDraw();
 
         modalWindowErase.style.display = "none";
     };
-
     document.querySelector('#btn-erase').onclick = itemDeleted;
 };
 
