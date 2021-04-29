@@ -4,6 +4,8 @@ let ingredientsDefault = [
 ];
 ingredientsDefault.sort();
 
+const DEFAULT_INGREDIENT_LENGTH = ingredientsDefault.length;
+
 // verify the existance of the client data
 let ingredientsClient = [];
 
@@ -118,5 +120,8 @@ class IngredientsBoard {
     }
 };
 
-let ingredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
+let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
 ingredients.boardDraw();
+
+
+
