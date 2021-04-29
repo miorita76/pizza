@@ -74,11 +74,9 @@ function itemAdd() {
 
         // Clear ingredient board
         clearBoard('#ingredient-board_list-default');
-
         // display ingredients list 
-        let fullIngredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
+        let fullIngredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
         fullIngredients.boardDraw();
-
 
         modalWindowAdd.style.display = "none";
 
@@ -92,3 +90,4 @@ function itemAdd() {
 };
 
 document.querySelector('#btn-add').onclick = itemAdd;
+
