@@ -110,7 +110,7 @@ function itemModify() {
         clearBoard('#ingredient-board_list-default');
 
         // display ingredients list 
-        let ingredients = new IngredientsBoard(ingredientsList, ingredientsDefault.length);
+        let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
         ingredients.boardDraw();
 
         modalWindowModify.style.display = "none";
