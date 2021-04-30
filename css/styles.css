@@ -91,14 +91,16 @@ body {
   position: relative;
 }
 
-#recipe-add {
+#recipe-add,
+#recipe-modify {
   margin: 0 auto;
   padding: 0;
   width: 95%;
   border: 1px solif red
 }
 
-.recipe-add_title {
+.recipe-add_title,
+.recipe-modify_title {
   margin: 10px 0 0 0;
   padding: 0;
   font-family: Tahoma, sans-serif;
@@ -111,7 +113,8 @@ body {
   letter-spacing: 1px;
 }
 
-.recipe-add_heading {
+.recipe-add_heading,
+.recipe-modify_heading {
   margin: 10px 0 0 0;
   padding: 0;
   font-family: Tahoma, sans-serif;
@@ -122,33 +125,39 @@ body {
   letter-spacing: 1px;
 }
 
-.recipe-add_input {
+.recipe-add_input,
+.recipe-modify_input {
   width: 98%;
   margin: 10px 0 0 0;
   border: 1px solid transparent; 
 }
 
-.recipe-add_input:hover {
+.recipe-add_input:hover,
+.recipe-modify_input:hover {
   width: 98%;
   border: 1px solid transparent;
   border-bottom: 1px solid #cccccc;
 }
 
 .recipe-add_input:focus,
-.recipe-add_input:active {
+.recipe-add_input:active,
+.recipe-modify_input:focus,
+.recipe-modify_input:active {
   width: 98%;
   border: 1px solid transparent;
   border-bottom: 1px solid brown;
   outline-width: 0; /* !!! */
 }
 
-.recipe-add_input::-webkit-input-placeholder {
+.recipe-add_input::-webkit-input-placeholder,
+.recipe-modify_input::-webkit-input-placeholder {
   color:#cccccc;
   border: none;
   border-radius: 4px;
 }
 
-.recipe-add_input:focus::-webkit-input-placeholder { 
+.recipe-add_input:focus::-webkit-input-placeholder,
+.recipe-modify_input:focus::-webkit-input-placeholder { 
   margin: 0;
   padding: 0;
 
@@ -159,6 +168,18 @@ body {
   color:black;
   text-overflow: ellipsis;
 }
+
+.recipe-modify_display {
+  margin: 0;
+  padding: 10px 0 0 0;
+
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+  
+  font-weight: 400;
+  color:red;
+}
+
 
 .recipe-add_input input[type=text] {
   width: 100%;
@@ -177,7 +198,9 @@ body {
 }
 
 #recipe-scaffolding_left,
-#recipe-scaffolding_right {
+#recipe-scaffolding_right,
+#recipe-scaffolding_left-modify,
+#recipe-scaffolding_right-modify {
   width: 50%;
   min-height: 10px;
 }
@@ -197,6 +220,17 @@ body {
   display: block;
   margin: 0 auto;
   padding: 20px 0 0 0;
+}
+
+.recipe-display_chapter {
+  margin: 0;
+  padding: 20px 0 0 20px;
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: brown;
+  text-align: left;
+  letter-spacing: 1px;
 }
 
 .recipe-display_details,
