@@ -72,10 +72,39 @@
                 </div>
             </div>
             <div id="recipe-modify" class="visually-hidden">
-                recipe-modify
-            </div>
-            <div id="recipe-erase" class="visually-hidden">
-                recipe-erase
+
+                <p class="recipe-modify_title">
+                    MODIFY My Recipise
+                </p>
+                <p id="recipe-modify_title" class="recipe-modify_heading">Modify Pizza Name:</p>
+                <p id="recipe-modify_name-old" class="recipe-modify_display"></p>
+                <input type="text" id="recipe-modify_name-new" class="recipe-modify_input"
+                    placeholder="Modify Pizza Name">
+                <p id="recipe-error_nameModify_exist" class="recipeErrorModify visually-hidden">
+                    Recipe Name Exists Already !!
+                </p>
+
+                <p class="recipe-modify_heading">Modify Ingredients:</p>
+                <p id="recipe-modify_ingredients-old" class="recipe-modify_display">ingredient list ingredient list</p>
+                <p class="recipe-modify_heading"></p>
+                <div id="recipe-modify_ingredients-draw" class="recipe-add_ingredients">
+                    <div id="recipe-scaffolding_left-modify"></div>
+                    <div id="recipe-scaffolding_right-modify"></div>
+                </div>
+
+                <p class="recipe-modify_heading">Ingredients Details:</p>
+                <textarea name="ingredients Details" id="recipe-modify_ingredients-details" cols="57" rows="10"
+                    placeholder="Insert Ingredients details">Mircea</textarea>
+
+                <p class="recipe-modify_heading">Recipe description:</p>
+                <textarea name="recipe description" id="recipe-modify_description" cols="57" rows="10"
+                    placeholder="Insert Recipe description"></textarea>
+
+                <div class="recipe-buttons">
+                    <button id="btn-save_recipe" class="btn-add">Save</button>
+                    <button id="btn-cancelModify_recipe" class="btn-cancel">Cancel</button>
+                </div>
+
             </div>
             <div id="recipe-display" class="visually-hidden">
 
