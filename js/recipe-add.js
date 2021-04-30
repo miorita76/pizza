@@ -37,7 +37,7 @@ function saveScaffoldAdd() {
         if (ingredientsSelected[i].checked) {
             elementSelected.push(ingredientsSelected[i].value);
         }
-    }
+    };
     // verification array elementSelected is empty or does not exist
     // else is selected Ingredients array
     if (elementSelected.length === 0 || elementSelected === undefined) {
@@ -145,6 +145,16 @@ document.querySelector('#btn-cancel_recipe').onclick = cancelScaffoldAdd;
 
 // Open ADD Scaffold board from recipice board
 function viewScaffoldAdd() {
+    document.getElementById("recipe-modify").classList.add("visually-hidden");
+    document.getElementById("recipe-display").classList.add("visually-hidden");
+    document.getElementById("recipe-error_nameAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-error_ingredientAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-error_detailAdd").classList.add("visually-hidden");
+    document.getElementById("recipe-scaffolding").style.display = "block";
+    document.getElementById("recipe-add").classList.remove("visually-hidden");
+    document.getElementById("main-board").classList.add("visually-hidden");
+
+
     let ingredientsLocal = localStorage.getItem('ingredients');
     ingredientsLocal = JSON.parse(ingredientsLocal);
 
@@ -155,16 +165,10 @@ function viewScaffoldAdd() {
         ingredientsList = ingredientsDefault;
     };
 
-    //clearBoard('#recipe-add_ingredients-draw');
+    clearBoard('#recipe-scaffolding_left');
+    clearBoard('#recipe-scaffolding_right');
     let ingredientsRecipe = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
     ingredientsRecipe.ingredientsScaffolding();
 
-    document.getElementById("recipe-display").classList.add("visually-hidden");
-    document.getElementById("recipe-error_nameAdd").classList.add("visually-hidden");
-    document.getElementById("recipe-error_ingredientAdd").classList.add("visually-hidden");
-    document.getElementById("recipe-error_detailAdd").classList.add("visually-hidden");
-    document.getElementById("recipe-scaffolding").style.display = "block";
-    document.getElementById("recipe-add").classList.remove("visually-hidden");
-    document.getElementById("main-board").classList.add("visually-hidden");
 };
 document.querySelector('#btn-recipesAdd').onclick = viewScaffoldAdd;
