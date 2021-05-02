@@ -177,7 +177,7 @@ body {
   font-size: 20px;
   
   font-weight: 400;
-  color:red;
+  color:blue;
 }
 
 
@@ -420,7 +420,7 @@ body {
 }
 
 
-.ingredient-board_clear input {
+#ingredient-board_clear input {
   position: absolute;
   opacity: 0;
   height: 0;
@@ -428,7 +428,7 @@ body {
   cursor: pointer;
 }
 
-.ingredient-board_clear {
+#ingredient-board_clear {
   margin: 0 auto 20px auto;
   padding: 7px 30px;
 
@@ -448,18 +448,18 @@ body {
   cursor: pointer;
 }
 
-.ingredient-board_clear:focus {
+#ingredient-board_clear:focus {
   outline: none;
 }
 
-.ingredient-board_clear:hover {
+#ingredient-board_clear:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   color: white;
   background-color: brown;
   cursor: pointer;
 }
 
-.ingredient-board_clear:active {
+#ingredient-board_clear:active {
   box-shadow: 0 6px 8px 0 rgba(112, 109, 109, 0.24), 0 9px 25px 0 rgba(148, 114, 114, 0.19);
   background-color: rgb(160, 163, 153);
   color: black;
@@ -693,7 +693,8 @@ body {
 
 .ingredientErrorAdd,
 .ingredientErrorModify,
-.recipeErrorAdd {
+.recipeErrorAdd,
+.recipeErrorModify {
   margin: 0;
   padding: 5px 0;
   color: red;
