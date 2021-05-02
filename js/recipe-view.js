@@ -173,7 +173,7 @@ if (typeof recipesClient != "undefined" && recipesClient != null && recipesClien
 
 
 class RecipesBoard {
-    constructor(recipesArr, defaultArrLength) {
+    constructor(recipesArr, defaultArrLength, highlightArr) {
         this.recipesArr = recipesArr;
         this.defaultArrLength = defaultArrLength;
     }
@@ -183,7 +183,34 @@ class RecipesBoard {
         for (let i in this.recipesArr) {
             var recipeLabel = document.createElement("LABEL");
             recipeLabel.setAttribute("class", "recipe-wrapper");
-
+            /*
+                       if ((this.highlightArr != null) && (typeof this.highlightArr != "undefined")) {
+                           console.log('+++++ highlightArr +++++');
+                           console.log('i= ', i);
+                           console.log(this.highlightArr);
+                           console.log('+++++ ========= +++++');
+           
+                           let k = 0;
+                           do {
+                               if (this.highlightArr[k] == this.recipesArr[i].name) {
+                                   recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
+                               };
+                               k++;
+                           } while (k < this.highlightArr.length);
+           
+           
+                       };
+           
+                      
+                       
+                                   if (this.highlightArr !== null) {
+                                       for (let k = 0; k < this.highlightArr.length; k++) {
+                                           if (this.highlightArr[k] == this.recipesArr[i].name) {
+                                               recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
+                                           };
+                                       };
+                                   };
+                       */
             if (i == this.defaultArrLength) {
                 let lineHR = document.createElement("HR");
                 lineHR.setAttribute("class", "ingredient-board_line");
@@ -212,12 +239,13 @@ class RecipesBoard {
 
             let recipeTitle = document.createElement("SPAN");
             recipeTitle.setAttribute("class", "recipe-label_title");
+
             let titleText = document.createTextNode(this.recipesArr[i].name);
             recipeTitle.appendChild(titleText);
             recipeLabel.appendChild(recipeTitle);
 
             parent.appendChild(recipeLabel);
-        }
+        };
     }
 };
 
