@@ -123,7 +123,7 @@ class IngredientsBoard {
         };
     }
     ingredientsScaffoldingModify() {
-        let parent = document.querySelector("#recipe-modify_ingredients-draw");
+        let parent = document.querySelector("#recipe-modify_ingredients-old");
 
         let left = document.getElementById("recipe-scaffolding_left-modify");
         let right = document.getElementById("recipe-scaffolding_right-modify");
@@ -165,7 +165,11 @@ class IngredientsBoard {
         };
     }
 
+
+
 };
 
 let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
 ingredients.boardDraw();
+
+
