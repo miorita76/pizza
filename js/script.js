@@ -11,6 +11,10 @@ function clearBoard(boardName) {
 
 function clearSelected() {
     console.log('clearSelected');
+    // Clear and draw recipe board
+    clearBoard('#recipe-board_list');
+    let recipesClear = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
+    recipesClear.boardDraw();
 }
 
 
@@ -20,10 +24,6 @@ function displayIngredientValue() {
     let ingredientsSelected = document.getElementsByName('ingredient_item');
     let elementSelected = [];
 
-
-
-
-
     // identify selected Ingredients array
     for (i = 0; i < ingredientsSelected.length; i++) {
         if (ingredientsSelected[i].checked) {
@@ -32,8 +32,12 @@ function displayIngredientValue() {
     };
     // verification array elementSelected is empty or does not exist
     // else is selected Ingredients array
-    if (elementSelected.length === 0 || elementSelected === undefined) {
+    if (elementSelected.length == 0 || elementSelected == undefined) {
         console.log('No ingerdient elements selected !');
+        // Clear and draw recipe board
+        clearBoard('#recipe-board_list');
+        let recipesNoIngredients = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
+        recipesNoIngredients.boardDraw();
     } else {
         // formation of higlight recipes
         console.log(elementSelected);
@@ -59,15 +63,27 @@ function displayIngredientValue() {
 
                 // formation of the highlightRecipeList array
                 if (logicResult(flag) == true) {
-                    console.log(recipesList[i].name);
+                    // console.log(recipesList[i].name);
                     highlightRecipeList.push(recipesList[i].name);
                 };
             };
             // draw highlight elements
             console.log(highlightRecipeList);
+
+            // Clear and draw recipe board
+            clearBoard('#recipe-board_list');
+            let recipesHighlight = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, highlightRecipeList);
+            recipesHighlight.boardDraw();
         }
         else {
             // nothing selected
+            console.log('elementSelected.length= ' + elementSelected.length);
+
+
+            // Clear and draw recipe board
+            clearBoard('#recipe-board_list');
+            let recipesClear = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
+            recipesClear.boardDraw();
         };
 
 
