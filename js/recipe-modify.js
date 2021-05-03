@@ -63,22 +63,22 @@ function modifyScaffoldRecipe() {
 
         // identify selected Ingredients array
         let ingredientsSelected = document.getElementsByName('ingredient_item');
-        let elementSelected = [];
+        let elementSelectedIngredient = [];
 
         for (i = 0; i < ingredientsSelected.length; i++) {
             if (ingredientsSelected[i].checked) {
                 /*console.log('before SELECTED ingerdient elements !');
-                console.log(elementSelected);*/
-                elementSelected.push(ingredientsSelected[i].value);
+                console.log(elementSelectedIngredient);*/
+                elementSelectedIngredient.push(ingredientsSelected[i].value);
             }
         };
 
-        if (elementSelected.length === 0 || elementSelected === undefined) {
-            elementSelected = recipesLocal[selectedRecipeIndex].ingredients;
+        if (elementSelectedIngredient.length === 0 || elementSelectedIngredient === undefined) {
+            elementSelectedIngredient = recipesLocal[selectedRecipeIndex].ingredients;
             // console.log('No ingerdient elements selected !');
-            // console.log(elementSelected);
+            // console.log(elementSelectedIngredient);
         };
-        recipesLocal[selectedRecipeIndex].ingredients = elementSelected;
+        recipesLocal[selectedRecipeIndex].ingredients = elementSelectedIngredient;
 
 
 
@@ -117,8 +117,12 @@ function modifyScaffoldRecipe() {
 
             // Clear and draw recipe board
             clearBoard('#recipe-board_list');
-            let fullRecipesInitial = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH);
+            let fullRecipesInitial = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
             fullRecipesInitial.boardDraw();
+
+            clearBoard('#ingredient-board_list-default');
+            let fullIngredientsInitial = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
+            fullIngredientsInitial.boardDraw();
 
             // clear insert INPUT pizza name
             document.getElementById("recipe-modify_name-new").value = '';
