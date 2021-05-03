@@ -145,10 +145,10 @@
 
         <aside class="ingredient-board">
             <header class="ingredient-board_header">Ingredients board</header>
-            <!--<button class="ingredient-board_clear" onclick="myFunction()">Clear filters</button>-->
+
             <form>
                 <div>
-                    <label class="ingredient-board_clear" onclick="displayIngredientValue()">
+                    <label id="ingredient-board_clear" onclick="clearSelected()">
                         <input type="reset">
                         <span>Clear filters</span>
                     </label>
@@ -157,7 +157,6 @@
                 <div id="ingredient-board_list-default"></div>
 
             </form>
-
 
             <hr class="ingredient-board_line">
             <button id="btn-ingredientsAdd" class="ingredient-board_add">&#43;&nbsp;Add New Ingredient</button>
@@ -232,19 +231,22 @@
     </div>
 
     <!-- modal window ingredient Add/Modify/Delete END -->
+    <script src="js/script.js"></script>
+
+    <script src="js/recipe-view.js"></script>
 
     <script src="js/ingredient-add.js"></script>
     <script src="js/ingredient-modify.js"></script>
     <script src="js/ingredient-erase.js"></script>
     <script src="js/ingredient-view.js"></script>
 
-    <script src="js/recipe-view.js"></script>
+
     <script src="js/recipe-add.js"></script>
     <script src="js/recipe-modify.js"></script>
     <script src="js/recipe-erase.js"></script>
 
 
-    <script src="js/script.js"></script>
+
 
 </body>
 
