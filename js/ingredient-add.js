@@ -80,6 +80,13 @@ function itemAdd() {
 
         modalWindowAdd.style.display = "none";
 
+
+        // Clear and draw recipe board
+        clearBoard('#recipe-board_list');
+        let recipesClearIngredientAdd = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
+        recipesClearIngredientAdd.boardDraw();
+
+
     }
     else if (newIngredient == '') {
         errMsg.textContent = "no data inserted";
@@ -90,4 +97,3 @@ function itemAdd() {
 };
 
 document.querySelector('#btn-add').onclick = itemAdd;
-
