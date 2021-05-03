@@ -104,7 +104,7 @@ function saveScaffoldAdd() {
             localStorage.setItem('recipes', JSON.stringify(recipesLocal));
             recipesList = recipesDefault.concat(recipesLocal);
             clearBoard('#recipe-board_list');
-            let fullRecipesNext = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH);
+            let fullRecipesNext = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
             fullRecipesNext.boardDraw();
 
             document.getElementById("recipe-scaffolding").style.display = "none";
@@ -122,7 +122,7 @@ function saveScaffoldAdd() {
 
             // Clear and draw recipe board
             clearBoard('#recipe-board_list');
-            let fullRecipesInitial = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH);
+            let fullRecipesInitial = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
             fullRecipesInitial.boardDraw();
 
             document.getElementById("recipe-scaffolding").style.display = "none";
