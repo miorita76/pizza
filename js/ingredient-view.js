@@ -2,10 +2,6 @@
 let ingredientsDefault = [
     "tomato sauce", "mozzarella", "mushrooms", "ham", "artichokes", "olives", "oregano", "parmesan", "eggs", "bacon", "parma ham", "pepperoni", "stracchino (soft cheese)", "eggplant", "boiled potatoes", "sausage", "peppers", "peas", "porchetta (Italian spit-roasted pork)", "pecorino cheese", "spicy salami", "chilli pepper", "asparagus", "salami", "zucchini", "polenta (boiled cornmeal)", "vienna sausage", "gorgonzola cheese", "speck", "porcino mushrooms", "fontina cheese", "fried egg"
 ];
-
-ingredientsDefault = [
-    "tomato sauce", "mozzarella", "mushrooms", "ham"
-];
 ingredientsDefault.sort();
 
 const DEFAULT_INGREDIENT_LENGTH = ingredientsDefault.length;
@@ -166,10 +162,14 @@ class IngredientsBoard {
     }
 
 
-
 };
 
 let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
 ingredients.boardDraw();
+
+// Clear and draw recipe board
+clearBoard('#recipe-board_list');
+let recipesClearIngredientView = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
+recipesClearIngredientView.boardDraw();
 
 
