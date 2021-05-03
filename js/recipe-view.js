@@ -20,7 +20,7 @@ let recipesDefault = [
         "ingredients": ["tomato sauce", "mozzarella", "parma ham"],
         "details": "- Crudo Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
         "description": "1) Pizza 'Crudo' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    }/*,
+    },
     {
         "name": "Montanara",
         "image": "img/montanara.png",
@@ -132,7 +132,7 @@ let recipesDefault = [
         "ingredients": ["tomato sauce", "mozzarella", "ham", "fried egg"],
         "details": "- 2 Tbs. extra-virgin olive oil, plus more for brushing;\n- 1/4 lb. (125 g) cremini mushrooms, thinly sliced;\n- Kosher salt and freshly ground pepper;\n- 1/2 batch food-processor pizza dough;\n- 1/2 cup (4 fl. oz./125 ml) prepared pizza sauce or tomato sauce;\n- 1/2 cup (2 oz./60 g) grated mozzarella cheese;\n- 1/2 cup (2 oz./60 g) black olives, pitted and halved;\n- 1 jar (5 oz./155 g) marinated artichoke hearts, drained and quartered;\n- 1/4 lb. (125 g) thinly sliced prosciutto;\n- Grated Parmesan cheese for serving",
         "description": "1) Mix flour, water, salt, yeast, olive oil to make a dough.\n2) Put genovese sauce and cheese on the dough.\n3) Put papurika and an egg on top.\n4) Pizza Bismarck recipe step.\n5) Bake it in the oven at 300℃ for 15 minutes.\n6) Pizza Bismarck recipe step.\n7) Here we go! Buon appetito!\n"
-    }*/
+    }
 ];
 
 const DEFAULT_RECIPE_LENGTH = recipesDefault.length;
@@ -176,41 +176,35 @@ class RecipesBoard {
     constructor(recipesArr, defaultArrLength, highlightArr) {
         this.recipesArr = recipesArr;
         this.defaultArrLength = defaultArrLength;
+        this.highlightArr = highlightArr;
     }
     boardDraw() {
         let parent = document.querySelector("#recipe-board_list");
 
         for (let i in this.recipesArr) {
-            var recipeLabel = document.createElement("LABEL");
+            let recipeLabel = document.createElement("LABEL");
             recipeLabel.setAttribute("class", "recipe-wrapper");
-            /*
-                       if ((this.highlightArr != null) && (typeof this.highlightArr != "undefined")) {
-                           console.log('+++++ highlightArr +++++');
-                           console.log('i= ', i);
-                           console.log(this.highlightArr);
-                           console.log('+++++ ========= +++++');
-           
-                           let k = 0;
-                           do {
-                               if (this.highlightArr[k] == this.recipesArr[i].name) {
-                                   recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
-                               };
-                               k++;
-                           } while (k < this.highlightArr.length);
-           
-           
-                       };
-           
-                      
-                       
-                                   if (this.highlightArr !== null) {
-                                       for (let k = 0; k < this.highlightArr.length; k++) {
-                                           if (this.highlightArr[k] == this.recipesArr[i].name) {
-                                               recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
-                                           };
-                                       };
-                                   };
-                       */
+
+
+            if ((this.highlightArr != null) && (typeof this.highlightArr != "undefined")) {
+                /*console.log('+++++ highlightArr +++++');
+                console.log('i= ', i);
+                console.log(this.highlightArr);
+                console.log('+++++ ========= +++++');
+
+                console.log('+++++ WHILE start +++++');*/
+                let k = 0;
+                do {
+                    if (this.highlightArr[k] == this.recipesArr[i].name) {
+                        recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
+                        // console.log('this.highlightArr[' + k + ']= ' + this.highlightArr[k]);
+                    };
+                    k++;
+                } while (k < this.highlightArr.length);
+                //console.log('+++++ WHILE end +++++');
+            };
+
+
             if (i == this.defaultArrLength) {
                 let lineHR = document.createElement("HR");
                 lineHR.setAttribute("class", "ingredient-board_line");
@@ -249,7 +243,7 @@ class RecipesBoard {
     }
 };
 
-let recipes = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH);
+let recipes = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
 recipes.boardDraw();
 
 let selectedRecipeIndex;
