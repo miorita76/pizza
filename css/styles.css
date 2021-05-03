@@ -305,7 +305,7 @@ body {
 }
 
 /* Recipe highlighted */
-.recipe-wrapper + .recipe-highlight {
+.recipe-wrapper.recipe-highlight {
   background-color: rosybrown;
 }
 
