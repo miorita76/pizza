@@ -137,6 +137,8 @@ document.querySelector('#btn-add_recipe').onclick = saveScaffoldAdd;
 
 // Cancel ADD Scaffold board
 function cancelScaffoldAdd() {
+    document.getElementById("ingredient-form").reset();
+
     document.getElementById("recipe-scaffolding").style.display = "none";
     document.getElementById("recipe-add").classList.add("visually-hidden");
     document.getElementById("main-board").classList.remove("visually-hidden");
@@ -154,7 +156,7 @@ function viewScaffoldAdd() {
     document.getElementById("recipe-add").classList.remove("visually-hidden");
     document.getElementById("main-board").classList.add("visually-hidden");
 
-
+    document.getElementById("ingredient-form").reset();
     let ingredientsLocal = localStorage.getItem('ingredients');
     ingredientsLocal = JSON.parse(ingredientsLocal);
 
