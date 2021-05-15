@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIZZA</title>
+    <title>PIZZA repetat</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -36,76 +36,82 @@
                 sausages.
             </p>
         </article>
-        <div id="recipe-scaffolding">
-            <div id="recipe-add" class="visually-hidden">
 
-                <p class="recipe-add_title">ADD New Recipise</p>
+
+        <div id="recipe-scaffolding">
+
+            <div id="recipe-add" class="visually-hidden">
+                <p class="recipe-add_title">Add New Recipe</p>
+                <hr class="recipe-board_line">
+
                 <p id="recipe-add_title" class="recipe-add_heading">Input Pizza Name:</p>
                 <input type="text" id="recipe-add_name" class="recipe-add_input" placeholder="Input Pizza Name">
-                <p id="recipe-error_nameAdd" class="recipeErrorAdd visually-hidden">No Name Inserted !!</p>
-                <p id="recipe-error_nameAdd_exist" class="recipeErrorAdd visually-hidden">Recipe Name Exists Already !!
+                <p id="recipe-error_nameAdd" class="error-message visually-hidden">No Name Inserted !!</p>
+                <p id="recipe-error_nameAdd_exist" class="error-message visually-hidden">Recipe Name Exists Already !!
                 </p>
 
                 <p class="recipe-add_heading">Select Ingredients:</p>
-                <div id="recipe-add_ingredients-draw" class="recipe-add_ingredients">
-                    <div id="recipe-scaffolding_left"></div>
-                    <div id="recipe-scaffolding_right"></div>
+                <div id="recipe-ingredients-draw_add" class="recipe-add_ingredients">
+                    <div id="recipe-scaffolding_left_add"></div>
+                    <div id="recipe-scaffolding_right_add"></div>
                 </div>
-                <p id="recipe-error_ingredientAdd" class="recipeErrorAdd visually-hidden">No Ingerdient Elements
+                <p id="recipe-error_ingredientAdd" class="error-message visually-hidden">No Ingerdient Elements
                     Selected !</p>
 
                 <p class="recipe-add_heading">Ingredients Details:</p>
-                <textarea name="ingredients Details" id="recipe-add_ingredients-details" cols="57" rows="10"
-                    placeholder="Insert Ingredients details"></textarea>
-                <p id="recipe-error_detailAdd" class="recipeErrorAdd visually-hidden">No Ingredients Details
+                <textarea name="ingredients Details" id="recipe-add_details" class="recipe-add_description" cols="57"
+                    rows="10" placeholder="Insert Ingredients details"></textarea>
+                <p id="recipe-error_detailAdd" class="error-message visually-hidden">No Ingredients Details
                     Inserted !!</p>
 
                 <p class="recipe-add_heading">Recipe description:</p>
-                <textarea name="recipe description" id="recipe-add_description" cols="57" rows="10"
-                    placeholder="Insert Recipe description"></textarea>
-                <p id="recipe-error_descriptionAdd" class="recipeErrorAdd visually-hidden">No Recipe Description
+                <textarea name="recipe description" id="recipe-add_description" class="recipe-add_description" cols="57"
+                    rows="10" placeholder="Insert Recipe description"></textarea>
+                <p id="recipe-error_descriptionAdd" class="error-message visually-hidden">No Recipe Description
                     Inserted !!</p>
 
-                <div class="recipe-buttons">
-                    <button id="btn-add_recipe" class="btn-add">ADD</button>
-                    <button id="btn-cancel_recipe" class="btn-cancel">Cancel</button>
+                <div class="display-buttons">
+                    <button id="btn-add_recipe" class="button-custom">ADD</button>
+                    <button id="btn-add-cancel_recipe" class="button-custom">Cancel</button>
                 </div>
             </div>
-            <div id="recipe-modify" class="visually-hidden">
 
-                <p class="recipe-modify_title">
-                    MODIFY My Recipise
-                </p>
+            <div id="recipe-modify" class="visually-hidden">
+                <p class="recipe-modify_title">Modify Recipe</p>
+                <hr class="recipe-board_line">
+
                 <p id="recipe-modify_title" class="recipe-modify_heading">Modify Pizza Name:</p>
                 <p id="recipe-modify_name-old" class="recipe-modify_display"></p>
                 <input type="text" id="recipe-modify_name-new" class="recipe-modify_input"
                     placeholder="Modify Pizza Name">
-                <p id="recipe-error_nameModify_exist" class="recipeErrorModify visually-hidden">
+                <p id="recipe-modify_error-name-exist" class="error-message visually-hidden">
                     Recipe Name Exists Already !!
                 </p>
 
-                <p class="recipe-modify_heading">Modify Ingredients:</p>
+                <p class="recipe-modify_heading">Modify Ingredients List:</p>
                 <p id="recipe-modify_ingredients-old" class="recipe-modify_display"></p>
                 <p class="recipe-modify_heading"></p>
-                <div id="recipe-modify_ingredients-draw" class="recipe-add_ingredients">
-                    <div id="recipe-scaffolding_left-modify"></div>
-                    <div id="recipe-scaffolding_right-modify"></div>
+                <div id="recipe-ingredients-draw_modify" class="recipe-add_ingredients">
+                    <div id="recipe-scaffolding_left_modify"></div>
+                    <div id="recipe-scaffolding_right_modify"></div>
                 </div>
 
+
                 <p class="recipe-modify_heading">Ingredients Details:</p>
-                <textarea name="ingredients Details" id="recipe-modify_ingredients-details" cols="57" rows="10"
+                <textarea class="recipe-modify_textarea" name="ingredients Details"
+                    id="recipe-modify_ingredients-details" cols="55" rows="10"
                     placeholder="Insert Ingredients details"></textarea>
 
                 <p class="recipe-modify_heading">Recipe description:</p>
-                <textarea name="recipe description" id="recipe-modify_description" cols="57" rows="10"
-                    placeholder="Insert Recipe description"></textarea>
+                <textarea class="recipe-modify_textarea" name="recipe description" id="recipe-modify_description"
+                    cols="55" rows="10" placeholder="Insert Recipe description"></textarea>
 
-                <div class="recipe-buttons">
-                    <button id="btn-save_recipe" class="btn-add">Save</button>
-                    <button id="btn-cancelModify_recipe" class="btn-cancel">Cancel</button>
+                <div class="display-buttons">
+                    <button id="btn-save_recipe" class="button-custom">Save</button>
+                    <button id="btn-modify-cancel_recipe" class="button-custom">Cancel</button>
                 </div>
-
             </div>
+
             <div id="recipe-display" class="visually-hidden">
 
                 <p class="recipe-display_title">pizza "Sample"</p>
@@ -115,134 +121,73 @@
                 <p class="recipe-display_chapter">Direction:</p>
                 <p class="recipe-display_description"></p>
 
-                <div id="recipe-buttons_manage" class="recipe-buttons visually-hidden">
-                    <button id="btn-modify_recipe" class="btn-add">Modify</button>
-                    <button id="btn-erase_recipe" class="btn-cancel">Erase</button>
+                <div class="display-buttons">
+                    <button id="btn-modify_recipe" class="button-custom">Modify</button>
+                    <button id="btn-erase_recipe" class="button-custom">Erase</button>
                 </div>
             </div>
         </div>
 
         <aside class="recipe-board">
             <header class="recipe-board_header">Recipes board</header>
-            <!--
-            <div id="recipe-board_list-example">
-                <label class="recipe-wrapper">
-                    <input type="radio" name="recipe_item" value="Recipe unmarked">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">Recipe unmarked</span>
-                </label>
-                <label class="recipe-wrapper recipe-highlight">
-                    <input type="radio" name="recipe_item" value="Recipe marked">
-                    <span class="recipe-checkmark"></span>
-                    <span class="recipe-label_title">Recipe marked</span>
-                </label>
-            </div>
-        -->
+            <hr class="recipe-board_line">
             <div id="recipe-board_list"></div>
             <hr class="recipe-board_line">
-            <button id="btn-recipesAdd" class="recipe-board_add">&#43;&nbsp;Add New Recipe</button>
+            <button id="recipe-board_add">&#43;&nbsp;Add New Recipe</button>
         </aside>
 
         <aside class="ingredient-board">
             <header class="ingredient-board_header">Ingredients board</header>
+            <hr class="ingredient-board_line">
 
             <form id="ingredient-form">
                 <div>
-                    <label id="ingredient-board_clear" onclick="clearSelected()">
+                    <label id="ingredient-board_clear" onclick="clearSelectedIngredients()">
                         <input type="reset">
                         <span>Clear filters</span>
                     </label>
                 </div>
 
-                <div id="ingredient-board_list-default"></div>
-
+                <div id="ingredient-board_list"></div>
             </form>
 
             <hr class="ingredient-board_line">
-            <button id="btn-ingredientsAdd" class="ingredient-board_add">&#43;&nbsp;Add New Ingredient</button>
-            <button id="btn-ingredientsModify" class="ingredient-board_modify  visually-hidden">&#43;&nbsp;Modify
-                My Ingredient Name</button>
-            <button id="btn-ingredientsErase" class="ingredient-board_erase  visually-hidden">&#43;&nbsp;Erase
-                My Ingredient</button>
+            <button id="ingredient-board_add">&#43;&nbsp;Add New Ingredient</button>
+            <button id="ingredient-board_modify">&#43;&nbsp;Modify Ingredient Name</button>
+            <button id="ingredient-board_erase">&#43;&nbsp;Erase Ingredient</button>
         </aside>
     </div>
 
 
-    <!-- modal window recipe Delete START -->
-
-    <div id="recipeErase" class="modal-window">
+    <!-- modal window ANSWER START -->
+    <div id="modal_erase" class="modal-window_erase visually-hidden">
         <div class="modal-window_content">
             <div class="modal-window_header">
-                <p class="modal-window_header-title">Erase My Recipe</p>
-                <p id="modal-window-recipe_closeErase" class="modal-window_header-close">&#43;</p>
+                <p class="modal-window_header-title"></p>
+                <p id="modal-window_close" class="modal-window_header-close">&#43;</p>
             </div>
-            <div id="recipeEraseBody" class="modal-window_body">Are You sure to Erase the Recipe ?</div>
-            <div id="recipeEraseFooter" class="modal-window_footer">
-                <button id="btn-recipeErase" class="btn-erase">Erase</button>
-                <button id="btn-recipeCancelErase" class="btn-cancel">Cancel</button>
+            <hr class="board-devider">
+            <div class="modal-window_body-text">
+                Are You Sure to Erase the Recipe ?
+            </div>
+            <hr class="board-devider">
+            <div class="modal-window_footer">
+                <button id="btn-erase" class="button-custom">Erase</button>
+                <button id="btn-cancel_erase" class="button-custom">Cancel</button>
             </div>
         </div>
     </div>
+    <!-- modal window ANSWER END -->
 
-    <!-- modal window recipe Delete END -->
-
-    <!-- modal window ingredient Add/Modify/Delete START -->
-
-    <div id="ingredientAdd" class="modal-window">
-        <div class="modal-window_content">
-            <div class="modal-window_header">
-                <p class="modal-window_header-title">Add New Ingredient</p>
-                <p id="modal-window_closeAdd" class="modal-window_header-close">&#43;</p>
-            </div>
-            <div id="ingredientAddBody" class="modal-window_body"></div>
-            <div id="ingredientAddFooter" class="modal-window_footer">
-                <button id="btn-add" class="btn-add">Add</button>
-                <button id="btn-cancelAdd" class="btn-cancel">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="ingredientModify" class="modal-window">
-        <div class="modal-window_content">
-            <div class="modal-window_header">
-                <p class="modal-window_header-title">Modify My Ingredient Name</p>
-                <p id="modal-window_closeModify" class="modal-window_header-close">&#43;</p>
-            </div>
-            <div id="ingredientModifyBody" class="modal-window_body"></div>
-            <div id="ingredientModifyFooter" class="modal-window_footer">
-                <button id="btn-modify" class="btn-modify">Modify</button>
-                <button id="btn-cancelModify" class="btn-cancel">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="ingredientErase" class="modal-window">
-        <div class="modal-window_content">
-            <div class="modal-window_header">
-                <p class="modal-window_header-title">Erase My Ingredient</p>
-                <p id="modal-window_closeErase" class="modal-window_header-close">&#43;</p>
-            </div>
-            <div id="ingredientEraseBody" class="modal-window_body">Erase My Ingredient</div>
-            <div id="ingredientEraseFooter" class="modal-window_footer">
-                <button id="btn-erase" class="btn-erase">Erase</button>
-                <button id="btn-cancelErase" class="btn-cancel">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal window ingredient Add/Modify/Delete END -->
-    <script src="js/script.js"></script>
 
     <script src="js/recipe-view.js"></script>
-
-    <script src="js/ingredient-add.js"></script>
-    <script src="js/ingredient-modify.js"></script>
-    <script src="js/ingredient-erase.js"></script>
     <script src="js/ingredient-view.js"></script>
 
     <script src="js/recipe-add.js"></script>
     <script src="js/recipe-modify.js"></script>
     <script src="js/recipe-erase.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 
