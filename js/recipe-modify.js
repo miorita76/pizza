@@ -107,7 +107,7 @@ function modifyScaffoldRecipe() {
 
             // Clear and draw recipe board
             clearBoard('#recipe-board_list');
-            let fullRecipesInitial = new RecipesBoard(recipesList);
+            let fullRecipesInitial = new RecipesBoard(recipesList, null);
             fullRecipesInitial.boardDraw();
 
             clearBoard('#ingredient-board_list');
