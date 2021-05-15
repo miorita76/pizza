@@ -66,8 +66,9 @@ recipesList.sort(function (a, b) {
 });
 
 class RecipesBoard {
-    constructor(recipesArr) {
+    constructor(recipesArr, highlightArr) {
         this.recipesArr = recipesArr;
+        this.highlightArr = highlightArr;
     }
     boardDraw() {
         let parent = document.querySelector("#recipe-board_list");
@@ -75,6 +76,18 @@ class RecipesBoard {
         for (let i in this.recipesArr) {
             let recipeLabel = document.createElement("LABEL");
             recipeLabel.setAttribute("class", "recipe-wrapper");
+
+            if ((this.highlightArr != null) && (typeof this.highlightArr != "undefined")) {
+                let k = 0;
+                do {
+                    if (this.highlightArr[k] == this.recipesArr[i].name) {
+                        recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
+                    };
+                    k++;
+                } while (k < this.highlightArr.length);
+
+            };
+
 
             let radioInput = document.createElement("INPUT");
             radioInput.setAttribute("type", "radio");
@@ -99,7 +112,7 @@ class RecipesBoard {
     }
 };
 
-let recipesDrawList = new RecipesBoard(recipesList);
+let recipesDrawList = new RecipesBoard(recipesList, null);
 recipesDrawList.boardDraw();
 
 
