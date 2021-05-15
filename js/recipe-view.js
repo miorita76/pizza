@@ -4,141 +4,58 @@ let recipesDefault = [
         "name": "Quattro Stagioni",
         "image": "img/quattro.png",
         "ingredients": ["tomato sauce", "mozzarella", "mushrooms", "ham", "artichokes", "olives", "oregano"],
-        "details": "- Quattro Stagioni Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Quattro Stagioni' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Carbonara",
-        "image": "img/carbonara.png",
-        "ingredients": ["tomato sauce", "mozzarella", "parmesan", "eggs", "bacon"],
-        "details": "- All-purpose flour and cornmeal;\n- 1 pound whole-wheat pizza dough, room temperature;\n- 1 tablespoon olive oil;\n- ⅛ teaspoon pepper;\n- 1 cup skim milk;\n- ¼ cup finely grated Parmesan;\n- ⅓ cup frozen peas, thawed;\n- 2 slices prosciutto, chopped or torn;\n",
-        "description": "1) Pizza 'Carbonara' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Crudo",
-        "image": "img/crudo.png",
-        "ingredients": ["tomato sauce", "mozzarella", "parma ham"],
-        "details": "- Crudo Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Crudo' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Montanara",
-        "image": "img/montanara.png",
-        "ingredients": ["tomato sauce", "mozzarella", "mushrooms", "pepperoni", "Stracchino (soft cheese)"],
-        "details": "- Montanara Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Montanara' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
+        "details": "1) 2 tablespoons extra virgin olive oil;\n2) 80g chestnut mushrooms, sliced;\n3) 200g passata (sieved tomatoes);\n4) 2 mozzarella balls, drained and cut into small cubes;\n5) 100g pitted Kalamata olives, quartered;\n6) 80g sliced cooked ham, cut into strips;\n7) 6 artichokes hearts in oil, drained and quartered;\n8) to taste salt and pepper.",
+        "description": "1) Prepare two baking trays by pouring 1 tablespoon of oil in each tray and spread it with your fingers or pastry brush. Brush the inside of a large bowl with oil.\n2) To prepare the topping, heat the oil in a large frying pan over a high heat, and fry the mushrooms for 5 minutes stirring frequently. Season with salt, leave to cool and set aside.\n3) To prepare the dough, place the flour, yeast and salt into a large bowl, make a well in the centre and pour in the water with 1 tablespoon of oil. Use a wooden spoon to mix everything together to create a wet dough.\n4) Turn out the dough onto a well-floured surface and work it with your hands for about 5 minutes or until smooth and elastic. Place in the oiled bowl, brush the top with oil and cover with clingfilm. Leave to rest at room temperature for 25 minutes.\n5) Preheat the oven to 200°C/gas mark 6.\n6) Once rested, turn out the dough onto a well-floured surface. Roll 4 little pieces of dough into 22cm-long strings, and set them aside. Divide the remaining dough into two equal halves. Use your hands to push each one out from the centre to create 2 discs about 22cm in diameter. Gently lift the pizza bases onto the oiled baking trays.\n7) Spread the passata evenly over the bases using the back of a tablespoon and season with salt and pepper. Scatter the mozzarella cheese on top.\n8) Use 2 dough strings per pizza to make a cross on top of each. Press the ends of the strings onto the edge of the base to secure. Both pizzas will have 4 triangle shapes. Fill one triangle with olives, one with ham, the next with artichokes and the last with mushrooms.\n9) Cook in the middle of the oven for 18 minutes until golden brown. Serve hot and enjoy.\n"
     },
     {
         "name": "Emiliana",
         "image": "img/emiliana.png",
         "ingredients": ["tomato sauce", "mozzarella", "eggplant", "boiled potatoes", "sausage"],
         "details": "- Emiliana Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Emiliana' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Fattoria",
-        "image": "img/fattoria.png",
-        "ingredients": ["tomato sauce", "mozzarella", "peppers", "peas", "porchetta (Italian spit-roasted pork)"],
-        "details": "- Fattoria Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Fattoria' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Prosciutto or Cardinale",
-        "image": "img/prosciutto.png",
-        "ingredients": ["tomato sauce", "mozzarella", "ham", "oregano"],
-        "details": "- Prosciutto or Cardinale Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Prosciutto or Cardinale' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Prosciutto e Funghi",
-        "image": "img/prosciutto_funghi.png",
-        "ingredients": ["tomato sauce", "mozzarella", "ham", "mushrooms"],
-        "details": "- Prosciutto e Funghi Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Prosciutto e Funghi' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Sarda",
-        "image": "img/sarda.png",
-        "ingredients": ["tomato sauce", "mozzarella", "pecorino cheese", "spicy salami"],
-        "details": "- Sarda Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Sarda' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
+        "description": "1) Prepare the pizza dough according to the basic recipe.\n2) Preheat the oven to 220 ° C.\n3) Roll out the dough for the pizzas.\n4) Fill the molds or place the dough on the baking tray and brush with the olive oil.\n5) Divide the mozzarella, basil, tomatoes cut side up and the Parma ham on top.\n6) Bake the pizzas in the middle of the oven for 20 minutes until golden brown and done.\n7) Divide the arugula on top and sprinkle with the Parmesan cheese.\n8) Drizzle with a little more olive oil if necessary."
     },
     {
         "name": "Diavola",
         "image": "img/diavola.png",
         "ingredients": ["tomato sauce", "mozzarella", "spicy salami", "chilli pepper"],
         "details": "- Diavola Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Diavola' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
+        "description": "1) Preheat the oven to 500°F with a pizza stone (or heavy-duty baking sheet turned upside down) on the centre rack.\n2) With the pizza dough rolled out and placed on a cornmeal-dusted pizza peel, use a small palette knife to spread the tomato sauce evenly over the dough. Place the salami slices, peppers and mozzarella evenly over the sauce. Sprinkle with the Parmesan.\n3) Give the pizza peel a shake to make sure the pizza isn’t sticking and slide it onto the hot stone in the oven. Bake for 8 to 10 minutes, until the crust is blistered and golden and the cheese is melted.\n4) Remove the pizza from the oven with tongs and slide it onto a cutting board. Top the hot pizza with the fresh basil leaves and pepperoncini pepper. Allow to cool for 3 minutes before slicing and serving.\n"
     },
     {
-        "name": "Contadina",
-        "image": "img/contadina.png",
-        "ingredients": ["tomato sauce", "mozzarella", "asparagus", "mushrooms", "bacon", "parmesan"],
-        "details": "- Contadina Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Contadina' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Capricciosa",
-        "image": "img/capricciosa.png",
-        "ingredients": ["tomato sauce", "mozzarella", "ham", "artichokes", "mushrooms", "olives"],
-        "details": "- 1 ball Ca' Momi Pizza Dough;\n- ¼ cup canned coarsely puréed or ground tomatoes;\n- ½ cup lightly packed coarsely shredded low-moisture mozzarella;\n- 2 ounces very thinly sliced prosciutto cotto (Italian-style uncured ham) or freshly sliced uncured boiled ham, torn into large shreds;\n- ½ cup Sautéed Mushrooms;\n- 3 ounces drained marinated artichokes, sliced into thin wedges.\n",
-        "description": "1) pizza 'Capricciosa' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Padana",
-        "image": "img/padana.png",
-        "ingredients": ["tomato sauce", "parmesan cheese", "salami", "zucchini", "polenta (boiled cornmeal)"],
-        "details": "- Padana Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Padana' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Tedesca",
-        "image": "img/tedesca.png",
-        "ingredients": ["tomato sauce", "mozzarella", "vienna sausage"],
-        "details": "- Tedesca Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Tebesca' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Tirolese",
-        "image": "img/tirolese.png",
-        "ingredients": ["tomato sauce", "mozzarella", "gorgonzola cheese", "speck"],
-        "details": "- Tirolese Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Tirolese' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Boscaiola",
-        "image": "img/boscaiola.png",
-        "ingredients": ["tomato sauce", "mozzarella", "porcino mushrooms", "bacon"],
-        "details": "- Boscaiola Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Start with making the pizza dough. Proof the yeast in the 1/8 cup warm water and 1/4 tsp sugar.\n 2) Put flour and 3/4 tsp salt in a bowl. Add water, yeast mixture and 1 tsp olive oil and knead dough to a ball with nice elastic and smooth consistency. cover with damp cloth and leave to rise for 1-1,5 hours until dough has doubled in size.\n3) In the meantime, start preparing sauce and toppings. For the sauce, chop garlic and shallots very finely. Put approximately 3/4 of the mushrooms in a food processor and process to a puree.\n4) Slice remaining mushrooms and fry them in 1 tbs of olive oil until browned, set aside.\n5) Remove meat from sausage casing and fry in a frying pan until browned, working it with a wooden spoon to get nice small chunks of meat. Add fennel seeds the last 2 minutes. Set aside.\n6) In a frying pan, heat 1/2 tbs butter and 1/2 tbs olive oil on medium-low heat and cook shallots and garlic without browning them, just until the raw aroma dissapears. Add mushroom puree and cook until most of the moisture has evaporized and the mixture starts to darken in color.\n7) Add the wine, bring to a boil until alcohol has evaporized. Add chopped parsley, sage and vegetable stock and simmer until sauce has thickened. Season with salt and black pepper to taste.\n8) Preheat oven to 500 degrees F.\n9) Roll dough with rolling pin into a circle of about 12 inches and place onto pizza stone or baking tray. Bake the bare crust for 4 minutes. Remove from oven and coat with boscaiola sauce. Top with fried mushrooms, sausage and grated mozzarella. Bake another 6-8 minutes until edges are light brown and cheese has melted. Remove from oven, garnish with fresh parsley, a drizzle of olive oil and serve.\n"
-    },
-    {
-        "name": "Francescana",
-        "image": "img/francescana.png",
-        "ingredients": ["tomato sauce", "mozzarella", "porcino mushrooms", "ham", "parmesan"],
-        "details": "- Francescana Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Francescana' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
-    },
-    {
-        "name": "Valdostana",
-        "image": "img/valdostana.png",
-        "ingredients": ["tomato sauce", "mozzarella", "fontina cheese", "bacon"],
-        "details": "- Valdostana Frozen dough (thawed) for 2 pizzas or 2 prepared crusts;\n- About 2 cups tomato sauce;\n- 1 cup shredded leftover cooked chicken;\n- 1 cup fresh basil, spinach, or other greens;\n- 8 ounces shredded mozzarella (2 cups);\n- 6 tablespoons olive oil;\n- Cornmeal.\n",
-        "description": "1) Pizza 'Valdostana' Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n2) Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.\n3) Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.\n4) Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.\n5) Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna\n"
+        "name": "Carbonara",
+        "image": "img/carbonara.png",
+        "ingredients": ["tomato sauce", "mozzarella", "parmesan", "eggs", "bacon"],
+        "details": "1) 150g cooking bacon, sliced;\n2) 130g mushrooms, sliced;\n3) 2 garlic cloves, crushed;\n4) 100ml crème fraiche;\n5) 210g mozzarella;\n6) 2 sourdough pizza bases;\n7) 100g mature Cheddar, grated;\n8) 30g rocket;\n9) 1 tsp olive oil.",
+        "description": "1) Heat the oven to gas 6, 200°C, fan 180°C. Put a large flat baking sheet that will fit both pizza bases in the oven to heat up.\n2) Fry the bacon over a medium heat for 5 mins until crisp. Remove from the pan and set aside. Add the mushrooms to the pan and fry for 5 mins until golden. Season with pepper and add half the garlic and fry for 1 min. Mix the crème fraiche with the remaining garlic and black pepper. Finely chop the mozzarella.\n3) Place the pizza bases on the hot baking tray. Divide the crème fraiche mixture between the pizza bases and spread out evenly, leaving a 1cm border around the edges.\n4) Top the pizzas with the bacon and mushrooms, then scatter over the mozzarella and the Cheddar. Cook for 9-10 mins until the cheese is bubbling and the bacon is golden and crisp. Scatter with the rocket just before serving. Serve any remaining rocket alongside, drizzled with a little olive oil."
     },
     {
         "name": "Bismarck",
         "image": "img/bismarck.png",
         "ingredients": ["tomato sauce", "mozzarella", "ham", "fried egg"],
-        "details": "- 2 Tbs. extra-virgin olive oil, plus more for brushing;\n- 1/4 lb. (125 g) cremini mushrooms, thinly sliced;\n- Kosher salt and freshly ground pepper;\n- 1/2 batch food-processor pizza dough;\n- 1/2 cup (4 fl. oz./125 ml) prepared pizza sauce or tomato sauce;\n- 1/2 cup (2 oz./60 g) grated mozzarella cheese;\n- 1/2 cup (2 oz./60 g) black olives, pitted and halved;\n- 1 jar (5 oz./155 g) marinated artichoke hearts, drained and quartered;\n- 1/4 lb. (125 g) thinly sliced prosciutto;\n- Grated Parmesan cheese for serving",
-        "description": "1) Mix flour, water, salt, yeast, olive oil to make a dough.\n2) Put genovese sauce and cheese on the dough.\n3) Put papurika and an egg on top.\n4) Pizza Bismarck recipe step.\n5) Bake it in the oven at 300℃ for 15 minutes.\n6) Pizza Bismarck recipe step.\n7) Here we go! Buon appetito!\n"
+        "details": "1) 1 time basic recipe pizza dough;\n2) extra virgin olive oil;\n3) 400 grams of mozzarella(in slices);\n4) 3 tablespoons basil(chopped);\n5) 350 grams cherry / cherry tomatoes(halved);\n6) 200 grams of Parma ham;\n7) 75 grams of arugula;\n8) 100 grams Parmesan cheese(grated).",
+        "description": "1) Spread the pizza sauce on the base;\n2) Lay out the Pancetta strips leaving rom in the middle for the egg;\n3) Scatter a handful of Mushrooms over the Pancetta;\n4) Using a spoon, dot the Salsa Tartufata over the pizza;\n5) Crack the egg into the middle;\n6) Bake in oven at highest temp for 3 - 5 minutes. The crust should be crispy but not burnt.;\n7) Remove from the oven and garnish with the rocket and mozzarella."
     }
 ];
 
-const DEFAULT_RECIPE_LENGTH = recipesDefault.length;
+let recipesLocal = [];
+let recipesList = [];
 
-// sorting by name
-recipesDefault.sort(function (a, b) {
+// verification the existance of the recipesList
+recipesLocal = localStorage.getItem('recipes');
+if (typeof recipesLocal != "undefined" && recipesLocal != null && recipesLocal.length != null && recipesLocal.length > 0) {
+    //console.log('recipesLocal - exista');
+    recipesList = JSON.parse(recipesLocal);
+}
+else {
+    console.log('recipesLocal - NU exista');
+    localStorage.setItem('recipes', JSON.stringify(recipesDefault));
+    recipesList = recipesDefault;
+};
+
+//console.log('----- recipesList ----');
+//console.log(recipesList);
+
+recipesList.sort(function (a, b) {
     if (a.name > b.name) {
         return 1;
     }
@@ -148,35 +65,9 @@ recipesDefault.sort(function (a, b) {
     return 0;
 });
 
-// verify the existance of the client data
-let recipesClient = [];
-
-recipesClient = localStorage.getItem('recipes');
-if (recipesClient) {
-    recipesClient = JSON.parse(recipesClient);
-    recipesClient.sort(function (a, b) {
-        if (a.name > b.name) {
-            return 1;
-        }
-        if (a.name < b.name) {
-            return -1;
-        }
-        return 0;
-    });
-};
-
-let recipesList = recipesDefault;
-if (typeof recipesClient != "undefined" && recipesClient != null && recipesClient.length != null && recipesClient.length > 0) {
-    recipesList = recipesDefault.concat(recipesClient);
-};
-
-
-
 class RecipesBoard {
-    constructor(recipesArr, defaultArrLength, highlightArr) {
+    constructor(recipesArr) {
         this.recipesArr = recipesArr;
-        this.defaultArrLength = defaultArrLength;
-        this.highlightArr = highlightArr;
     }
     boardDraw() {
         let parent = document.querySelector("#recipe-board_list");
@@ -184,41 +75,6 @@ class RecipesBoard {
         for (let i in this.recipesArr) {
             let recipeLabel = document.createElement("LABEL");
             recipeLabel.setAttribute("class", "recipe-wrapper");
-
-
-            if ((this.highlightArr != null) && (typeof this.highlightArr != "undefined")) {
-                /*console.log('+++++ highlightArr +++++');
-                console.log('i= ', i);
-                console.log(this.highlightArr);
-                console.log('+++++ ========= +++++');
-
-                console.log('+++++ WHILE start +++++');*/
-                let k = 0;
-                do {
-                    if (this.highlightArr[k] == this.recipesArr[i].name) {
-                        recipeLabel.setAttribute("class", "recipe-wrapper recipe-highlight");
-                        // console.log('this.highlightArr[' + k + ']= ' + this.highlightArr[k]);
-                    };
-                    k++;
-                } while (k < this.highlightArr.length);
-                //console.log('+++++ WHILE end +++++');
-            };
-
-
-            if (i == this.defaultArrLength) {
-                let lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-
-                let headerName = document.createElement("HEADER");
-                headerName.setAttribute("class", "ingredient-board_header");
-                headerName.textContent = "My recipes board";
-                parent.appendChild(headerName);
-
-                lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-            };
 
             let radioInput = document.createElement("INPUT");
             radioInput.setAttribute("type", "radio");
@@ -243,8 +99,9 @@ class RecipesBoard {
     }
 };
 
-let recipes = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
-recipes.boardDraw();
+let recipesDrawList = new RecipesBoard(recipesList);
+recipesDrawList.boardDraw();
+
 
 let selectedRecipeIndex;
 
@@ -253,14 +110,6 @@ function displayRecipeValue() {
 
     for (i = 0; i < recipeSelected.length; i++) {
         if (recipeSelected[i].checked) {
-            // The Dashboard Recipe display
-            if (i > DEFAULT_RECIPE_LENGTH - 1) {
-                document.getElementById("recipe-buttons_manage").classList.remove("visually-hidden");
-            }
-            else {
-                document.getElementById("recipe-buttons_manage").classList.add("visually-hidden");
-            };
-
             document.querySelector('.recipe-display_title').textContent = 'pizza "' + recipesList[i].name + '"';
             document.querySelector('.recipe-display_img').src = recipesList[i].image;
             document.querySelector('.recipe-display_details').textContent = recipesList[i].details;
