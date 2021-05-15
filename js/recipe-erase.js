@@ -15,7 +15,7 @@ function eraseScaffoldRecipe() {
     localStorage.setItem('recipes', JSON.stringify(recipesList));
 
     clearBoard('#recipe-board_list');
-    let fullRecipesErase = new RecipesBoard(recipesList);
+    let fullRecipesErase = new RecipesBoard(recipesList, null);
     fullRecipesErase.boardDraw();
 
     document.getElementById("recipe-scaffolding").style.display = "none";
