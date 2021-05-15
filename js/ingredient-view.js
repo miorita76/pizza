@@ -1,60 +1,43 @@
-// backend data supply - Ingredient list
+// generate - Ingredient list
 let ingredientsDefault = [
-    "tomato sauce", "mozzarella", "mushrooms", "ham", "artichokes", "olives", "oregano", "parmesan", "eggs", "bacon", "parma ham", "pepperoni", "stracchino (soft cheese)", "eggplant", "boiled potatoes", "sausage", "peppers", "peas", "porchetta (Italian spit-roasted pork)", "pecorino cheese", "spicy salami", "chilli pepper", "asparagus", "salami", "zucchini", "polenta (boiled cornmeal)", "vienna sausage", "gorgonzola cheese", "speck", "porcino mushrooms", "fontina cheese", "fried egg"
+    'artichokes', 'bacon', 'boiled potatoes', 'eggplant', 'eggs', 'fried egg', 'ham', 'mozzarella', 'mushrooms', 'olives', 'oregano', 'parmesan', 'sausage', 'spicy salami', 'chilli pepper', 'tomato sauce'
 ];
 ingredientsDefault.sort();
 
-const DEFAULT_INGREDIENT_LENGTH = ingredientsDefault.length;
+localStorage.setItem('ingredients', JSON.stringify(ingredientsDefault));
 
-// verify the existance of the client data
-let ingredientsClient = [];
+// verify the existance of the recipes list
+let ingredientsList = [];
 
-let client_ingredients = localStorage.getItem('ingredients');
-if (typeof client_ingredients != "undefined" && client_ingredients != null && client_ingredients.length != null && client_ingredients.length > 0) {
-    ingredientsClient = JSON.parse(client_ingredients);
-    ingredientsClient.sort();
+ingredientsList = localStorage.getItem('ingredients');
+if (ingredientsList) {
+    ingredientsList = JSON.parse(ingredientsList);
+    ingredientsList.sort();
+}
+else {
+    console.log('Ingredients List do not exist.')
 };
 
-let ingredientsList = ingredientsDefault;
-if (typeof ingredientsClient != "undefined" && ingredientsClient != null && ingredientsClient.length != null && ingredientsClient.length > 0) {
-    ingredientsList = ingredientsDefault.concat(ingredientsClient);
-}
+//console.log(ingredientsList);
+
 
 class IngredientsBoard {
-    constructor(ingredientsArr, defaultArrLength) {
+    constructor(ingredientsArr) {
         this.ingredientsArr = ingredientsArr;
-        this.defaultArrLength = defaultArrLength;
     }
     boardDraw() {
-        let parent = document.querySelector("#ingredient-board_list-default");
+        let parent = document.querySelector("#ingredient-board_list");
 
         for (let i in this.ingredientsArr) {
 
             let ingredientLabel = document.createElement("LABEL");
             ingredientLabel.setAttribute("class", "ingredient-wrapper");
 
-
-            if (i == this.defaultArrLength) {
-                let lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-
-                let headerName = document.createElement("HEADER");
-                headerName.setAttribute("class", "ingredient-board_header");
-                headerName.textContent = "My ingredients board";
-                parent.appendChild(headerName);
-
-                lineHR = document.createElement("HR");
-                lineHR.setAttribute("class", "ingredient-board_line");
-                parent.appendChild(lineHR);
-            };
-
-
             let checkboxInput = document.createElement("INPUT");
             checkboxInput.setAttribute("type", "checkbox");
             checkboxInput.setAttribute("name", "ingredient_item");
             checkboxInput.setAttribute("value", this.ingredientsArr[i]);
-            checkboxInput.setAttribute("onclick", "displayIngredientValue()");
+            // checkboxInput.setAttribute("onclick", "displayIngredientValue()");
             ingredientLabel.appendChild(checkboxInput);
 
             let ingredientCheckmark = document.createElement("SPAN");
@@ -71,105 +54,59 @@ class IngredientsBoard {
             parent.appendChild(ingredientLabel);
         };
 
-        if (this.ingredientsArr.length > this.defaultArrLength) {
-            document.getElementById("btn-ingredientsModify").classList.remove("visually-hidden");
-            document.getElementById("btn-ingredientsErase").classList.remove("visually-hidden");
-        };
     }
-    ingredientsScaffolding() {
-        let parent = document.querySelector("#recipe-add_ingredients-draw");
-
-        let left = document.getElementById("recipe-scaffolding_left");
-        let right = document.getElementById("recipe-scaffolding_right");
-
-        for (let key in this.ingredientsArr) {
-            if (key < this.ingredientsArr.length / 2 + 1)
-                parent = left
-            else parent = right;
-
-            let ingredientLabel = document.createElement("LABEL");
-            ingredientLabel.setAttribute("class", "ingredient-wrapper");
-
-            if (key == this.defaultArrLength) {
-                let headerName = document.createElement("HEADER");
-                headerName.setAttribute("class", "ingredient-board_header");
-                headerName.textContent = "My Ingredients";
-                parent.appendChild(headerName);
-            };
-
-
-            let checkboxInput = document.createElement("INPUT");
-            checkboxInput.setAttribute("type", "checkbox");
-            checkboxInput.setAttribute("name", "ingredient_item");
-            checkboxInput.setAttribute("value", this.ingredientsArr[key]);
-            ingredientLabel.appendChild(checkboxInput);
-
-            let ingredientCheckmark = document.createElement("SPAN");
-            ingredientCheckmark.setAttribute("class", "ingredient-checkmark");
-            ingredientLabel.appendChild(ingredientCheckmark);
-
-            let ingredientTitle = document.createElement("SPAN");
-            ingredientTitle.setAttribute("class", "ingredient-label_title");
-
-            let titleText = document.createTextNode(this.ingredientsArr[key]);
-            ingredientTitle.appendChild(titleText);
-            ingredientLabel.appendChild(ingredientTitle);
-
-            parent.appendChild(ingredientLabel);
-        };
-    }
-    ingredientsScaffoldingModify() {
-        let parent = document.querySelector("#recipe-modify_ingredients-old");
-
-        let left = document.getElementById("recipe-scaffolding_left-modify");
-        let right = document.getElementById("recipe-scaffolding_right-modify");
-
-        for (let key in this.ingredientsArr) {
-            if (key < this.ingredientsArr.length / 2 + 1)
-                parent = left
-            else parent = right;
-
-            let ingredientLabel = document.createElement("LABEL");
-            ingredientLabel.setAttribute("class", "ingredient-wrapper");
-
-            if (key == this.defaultArrLength) {
-                let headerName = document.createElement("HEADER");
-                headerName.setAttribute("class", "ingredient-board_header");
-                headerName.textContent = "My Ingredients";
-                parent.appendChild(headerName);
-            };
-
-
-            let checkboxInput = document.createElement("INPUT");
-            checkboxInput.setAttribute("type", "checkbox");
-            checkboxInput.setAttribute("name", "ingredient_item");
-            checkboxInput.setAttribute("value", this.ingredientsArr[key]);
-            ingredientLabel.appendChild(checkboxInput);
-
-            let ingredientCheckmark = document.createElement("SPAN");
-            ingredientCheckmark.setAttribute("class", "ingredient-checkmark");
-            ingredientLabel.appendChild(ingredientCheckmark);
-
-            let ingredientTitle = document.createElement("SPAN");
-            ingredientTitle.setAttribute("class", "ingredient-label_title");
-
-            let titleText = document.createTextNode(this.ingredientsArr[key]);
-            ingredientTitle.appendChild(titleText);
-            ingredientLabel.appendChild(ingredientTitle);
-
-            parent.appendChild(ingredientLabel);
-        };
-    }
-
 
 };
 
-let ingredients = new IngredientsBoard(ingredientsList, DEFAULT_INGREDIENT_LENGTH);
-ingredients.boardDraw();
+class IngredientsScaffolding {
+    constructor(ingredientsArr, actionType) {
+        this.ingredientsArr = ingredientsArr;
+        this.actionType = actionType;
+    }
+    boardDraw() {
+        let parent = document.querySelector("#recipe-ingredients-draw" + this.actionType);
 
-// Clear and draw recipe board
-clearBoard('#recipe-board_list');
-let recipesClearIngredientView = new RecipesBoard(recipesList, DEFAULT_RECIPE_LENGTH, null);
-recipesClearIngredientView.boardDraw();
+        let left = document.getElementById("recipe-scaffolding_left" + this.actionType);
+        let right = document.getElementById("recipe-scaffolding_right" + this.actionType);
 
+        for (let key in this.ingredientsArr) {
+            if (key < this.ingredientsArr.length / 2 + 1)
+                parent = left
+            else parent = right;
 
+            let ingredientLabel = document.createElement("LABEL");
+            ingredientLabel.setAttribute("class", "ingredient-wrapper");
+
+            let checkboxInput = document.createElement("INPUT");
+            checkboxInput.setAttribute("type", "checkbox");
+            checkboxInput.setAttribute("name", "recipe-ingredient_item" + this.actionType);
+            checkboxInput.setAttribute("value", this.ingredientsArr[key]);
+            ingredientLabel.appendChild(checkboxInput);
+
+            let ingredientCheckmark = document.createElement("SPAN");
+            ingredientCheckmark.setAttribute("class", "ingredient-checkmark");
+            ingredientLabel.appendChild(ingredientCheckmark);
+
+            let ingredientTitle = document.createElement("SPAN");
+            ingredientTitle.setAttribute("class", "ingredient-label_title");
+
+            let titleText = document.createTextNode(this.ingredientsArr[key]);
+            ingredientTitle.appendChild(titleText);
+            ingredientLabel.appendChild(ingredientTitle);
+
+            parent.appendChild(ingredientLabel);
+        };
+    }
+
+};
+
+let ingredientsDrawList = new IngredientsBoard(ingredientsList);
+ingredientsDrawList.boardDraw();
+
+// clear selected ingredients
+function clearSelectedIngredients() {
+    // clear and draw ingredients
+    document.getElementById("ingredient-form").reset();
+    let recipeIngredientsLocal = localStorage.getItem('ingredients');
+    recipeIngredientsLocal = JSON.parse(recipeIngredientsLocal);
+};
