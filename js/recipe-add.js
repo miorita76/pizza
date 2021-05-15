@@ -104,7 +104,7 @@ function saveScaffoldAdd() {
             localStorage.setItem('recipes', JSON.stringify(recipesLocal));
             recipesList = recipesLocal;
             clearBoard('#recipe-board_list');
-            let fullRecipesNext = new RecipesBoard(recipesList);
+            let fullRecipesNext = new RecipesBoard(recipesList, null);
             fullRecipesNext.boardDraw();
 
             document.getElementById("recipe-scaffolding").style.display = "none";
@@ -122,7 +122,7 @@ function saveScaffoldAdd() {
 
             // Clear and draw recipe board
             clearBoard('#recipe-board_list');
-            let fullRecipesInitial = new RecipesBoard(recipesList);
+            let fullRecipesInitial = new RecipesBoard(recipesList, null);
             fullRecipesInitial.boardDraw();
 
             document.getElementById("recipe-scaffolding").style.display = "none";
@@ -144,7 +144,7 @@ function viewScaffoldAdd() {
 
     // Clear and draw recipe board
     clearBoard('#recipe-board_list');
-    let fullRecipesInitial = new RecipesBoard(recipesList);
+    let fullRecipesInitial = new RecipesBoard(recipesList, null);
     fullRecipesInitial.boardDraw();
 
     // clear Name field in case of previous insertion
