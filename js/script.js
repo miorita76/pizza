@@ -5,6 +5,7 @@ function clearBoard(boardName) {
     while (parent.firstChild) {
         parent.firstChild.remove()
     };
+    console.log('resetApp22');
 };
 
 
@@ -12,10 +13,20 @@ function clearSelected() {
     console.log('clearSelected');
     // Clear and draw recipe board
     clearBoard('#recipe-board_list');
-    let recipesClear = new RecipesBoard(recipesList);
+    let recipesClear = new RecipesBoard(recipesList, null);
     recipesClear.boardDraw();
 
     cancelScaffoldModify();
+}
+
+
+function resetApp() {
+    console.log('resetApp');
+
+    localStorage.removeItem("ingredients");
+    localStorage.removeItem("recipes");
+
+    location.reload();
 }
 
 
