@@ -37,7 +37,7 @@ class IngredientsBoard {
             checkboxInput.setAttribute("type", "checkbox");
             checkboxInput.setAttribute("name", "ingredient_item");
             checkboxInput.setAttribute("value", this.ingredientsArr[i]);
-            // checkboxInput.setAttribute("onclick", "displayIngredientValue()");
+            checkboxInput.setAttribute("onclick", "displayIngredientValue()");
             ingredientLabel.appendChild(checkboxInput);
 
             let ingredientCheckmark = document.createElement("SPAN");
@@ -100,8 +100,10 @@ class IngredientsScaffolding {
 
 };
 
+
 let ingredientsDrawList = new IngredientsBoard(ingredientsList);
 ingredientsDrawList.boardDraw();
+
 
 // clear selected ingredients
 function clearSelectedIngredients() {
@@ -109,4 +111,9 @@ function clearSelectedIngredients() {
     document.getElementById("ingredient-form").reset();
     let recipeIngredientsLocal = localStorage.getItem('ingredients');
     recipeIngredientsLocal = JSON.parse(recipeIngredientsLocal);
+
+    // Clear and draw recipe board
+    clearBoard('#recipe-board_list');
+    let fullRecipesInitial = new RecipesBoard(recipesList, null);
+    fullRecipesInitial.boardDraw();
 };
